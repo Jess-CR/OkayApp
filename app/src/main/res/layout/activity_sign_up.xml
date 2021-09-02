@@ -114,13 +114,13 @@
 
         <AutoCompleteTextView
             android:id="@+id/sign_up_editText_profession"
-            android:layout_width="340dp"
+            android:layout_width="335dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:inputType="none"
             android:background="@drawable/roundstyle"
             android:backgroundTint="@color/white"
             android:hint="@string/sign_up_profession_ph"
+            android:inputType="none"
             android:textColor="@color/grey_placeholders"
             android:textSize="15dp" />
 
