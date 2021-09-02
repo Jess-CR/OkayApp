@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">OkayApp</string>
+
+    <!-- ***************** Pantalla Menu ***************** -->
+    <string name="menu_login">Iniciar Sesión</string>
+    <string name="menu_sign_up">Registrarse</string>
+
+    <!-- ***************** Pantalla SignUp *************** -->
+    <string name="sign_up_title">Crea tu cuenta</string>
+    <string name="sign_up_user_name_ph">Nombre de usuario</string>
+    <string name="sign_up_email_ph">Correo electrónico</string>
+    <string name="sign_up_password_ph">Crea una contraseña</string>
+    <string name="sign_up_password_confirmation_ph">Confirma tu contraseña</string>
+    <string name="sign_up_age_ph">¿Cuántos años tienes?</string>
+    <string name="sign_up_profession_ph">¿Estudiante o profesor?</string>
+    <string name="sign_up_button">Continuar</string>
+    <string-array name="profession">
+        <item>Estudiante</item>
+        <item>Profesor</item>
+    </string-array>
+
+    <!-- ***************** Pantalla LogIn **************** -->
+    <string name="log_in_email">Ingresa tu correo electrónico</string>
+    <string name="log_in_email_ph">ejemplo@correo.com</string>
+    <string name="login_password">Ingresa tu contraseña</string>
+    <string name="log_in_password_ph">Contraseña</string>
+    <string name="log_in_forgotpassword"><u>¿Olvidaste tu contraseña?</u></string>
+    <string name="log_in_remember">Recordarme en este dispositivo</string>
+    <string name="log_in_button">Iniciar Sesión</string>
+</resources>

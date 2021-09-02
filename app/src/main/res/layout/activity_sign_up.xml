@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="@color/purple_background">
+
+
+    <TextView
+        android:id="@+id/sign_up_txt_title"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/sign_up_title"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sign_up_editText_username"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/white"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="41dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/grey_placeholders"
+        android:textSize="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/sign_up_user_name_ph"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_txt_title" />
+
+    <EditText
+        android:id="@+id/sign_up_editText_email"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/sign_up_email_ph"
+        android:textColor="@color/grey_placeholders"
+        android:textSize="15dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_username" />
+
+    <EditText
+        android:id="@+id/sign_up_editText_password"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/sign_up_password_ph"
+        android:textColor="@color/grey_placeholders"
+        android:textSize="15dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_email" />
+
+    <EditText
+        android:id="@+id/sign_up_editText_passwordConfirmation"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:hint="@string/sign_up_password_confirmation_ph"
+        android:textColor="@color/grey_placeholders"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_password" />
+
+
+    <NumberPicker
+        android:id="@+id/sign_up_numPicker_age"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/white"
+        android:paddingLeft="20dp"
+        android:scrollbarSize="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_passwordConfirmation" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_numPicker_age">
+
+        <AutoCompleteTextView
+            android:id="@+id/sign_up_editText_profession"
+            android:layout_width="340dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white"
+            android:hint="@string/sign_up_profession_ph"
+            android:textColor="@color/grey_placeholders"
+            android:textSize="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
