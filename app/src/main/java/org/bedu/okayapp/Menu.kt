@@ -9,7 +9,6 @@ import android.widget.ImageView
 class Menu : AppCompatActivity() {
 
     private lateinit var menu_img_logo: ImageView
-    private lateinit var menu_img_apptitle: ImageView
     private lateinit var menu_btn_logIn: Button
     private lateinit var menu_btn_signUp: Button
 
@@ -18,8 +17,7 @@ class Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        menu_img_logo =findViewById(R.id.menu_img_logo)
-        menu_img_apptitle =findViewById(R.id.menu_img_apptitle)
+        menu_img_logo =findViewById(R.id.logoMenu)
         menu_btn_logIn =findViewById(R.id.menu_btn_logIn)
         menu_btn_signUp =findViewById(R.id.menu_btn_signUp)
 

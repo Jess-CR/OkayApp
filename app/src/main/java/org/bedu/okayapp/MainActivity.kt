@@ -9,9 +9,9 @@ import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var main_img_logo: ImageView
+    /*private lateinit var main_img_logo: ImageView
     private lateinit var main_img_apptitle: ImageView
-    private lateinit var btnprueba: Button
+    private lateinit var btnprueba: Button*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
           val intent = Intent(this@MainActivity,Menu::class.java)
           startActivity(intent)
           finish()
-      }, 2500)
+      }, 3500)
 
 
         //Comento esta parte para cargar el intro a partir del svg
