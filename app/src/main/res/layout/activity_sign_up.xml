@@ -103,34 +103,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_passwordConfirmation" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_numPicker_age">
-
-        <AutoCompleteTextView
-            android:id="@+id/sign_up_editText_profession"
-            android:layout_width="340dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundstyle"
-            android:backgroundTint="@color/white"
-            android:hint="@string/sign_up_profession_ph"
-            android:inputType="none"
-            android:textColor="@color/grey_placeholders"
-            android:textSize="15dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_up_btn_continuar"
         android:layout_width="316dp"
         android:layout_height="64dp"
-        android:layout_marginTop="80dp"
         android:backgroundTint="@color/yolo_purple"
         android:text="@string/sign_up_button"
         android:textColor="@color/white"
@@ -140,8 +116,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.AppCompat.Light.ListView.DropDown"
+        android:id="@+id/textInputLayout"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_btn_continuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_numPicker_age">
+
+        <AutoCompleteTextView
+
+            android:id="@+id/sign_up_editText_profession"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white"
+            android:hint="@string/sign_up_profession_ph"
+            android:inputType="none"
+            android:paddingLeft="20dp"
+            android:textColor="@color/grey_placeholders"
+            android:textSize="15dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

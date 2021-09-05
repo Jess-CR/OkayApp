@@ -4,26 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_background"
     tools:context=".Menu">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menu_btn_logIn"
         android:layout_width="340dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="512dp"
         android:backgroundTint="@color/blue_botton"
+        app:cornerRadius="8dp"
         android:text="@string/menu_login"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menu_btn_signUp"
         android:layout_width="330dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/button_borderblue"
+        android:backgroundTint="@color/white"
+        app:strokeColor="@color/yolo_blue"
+        app:strokeWidth="2dp"
+        app:cornerRadius="8dp"
         android:text="@string/menu_sign_up"
         android:textColor="@color/blue_botton"
         app:layout_constraintEnd_toEndOf="parent"

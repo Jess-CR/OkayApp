@@ -15,11 +15,12 @@
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/drawable/ic_menu_img_logo.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/drawable/ic_yolointro.xml" value="0.153125" />
-        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.11911231884057971" />
+        <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.2709453970132078" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15625" />
-        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.2389750899454507" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.20819883384829715" />
+        <entry key="app/src/main/res/layout/dropdown_profession.xml" value="0.19746376811594202" />
       </map>
     </option>
   </component>

@@ -2,9 +2,11 @@ package org.bedu.okayapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.NumberPicker
 import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
 
 class SignUp : AppCompatActivity() {
 
@@ -15,6 +17,9 @@ class SignUp : AppCompatActivity() {
     private lateinit var sign_up_editText_passwordConfirmation:EditText
     private lateinit var sign_up_numPicker_age:NumberPicker
     private lateinit var sign_up_editText_profession:EditText
+
+    //Intenté poner el dropdown menu para seleccionar Estudiante o profesor
+    //private val binding get() = binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,9 +32,15 @@ class SignUp : AppCompatActivity() {
         sign_up_editText_passwordConfirmation=findViewById(R.id.sign_up_editText_passwordConfirmation)
         //sign_up_numPicker_age=findViewById(R.id.sign_up_numPicker_age)
         sign_up_editText_profession=findViewById(R.id.sign_up_editText_profession)
-
         sign_up_numPicker_age.minValue=0
         sign_up_numPicker_age.maxValue=99
+
+        //Esta es la funcionalidad para el Dropdown menu
+        /*val profession = resources.getStringArray(R.array.profession)
+        val arrayAdapter= ArrayAdapter (requireContext(),R.layout.dropdown_item,profession)
+        binding.autoCompleteTextView.setAdapter(ArrayAdapter)
+
+        return binding.root*/
 
     }
 }
