@@ -24,16 +24,19 @@
         android:id="@+id/menu_btn_signUp"
         android:layout_width="330dp"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="@color/white"
-        app:strokeColor="@color/yolo_blue"
-        app:strokeWidth="2dp"
-        app:cornerRadius="8dp"
         android:text="@string/menu_sign_up"
         android:textColor="@color/blue_botton"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_btn_logIn" />
+        app:layout_constraintTop_toBottomOf="@+id/menu_btn_logIn"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="@color/yolo_blue"
+        app:strokeWidth="2dp" />
 
     <ImageView
         android:id="@+id/logoMenu"
