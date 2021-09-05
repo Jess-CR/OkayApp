@@ -23,4 +23,5 @@ YOLO es un acrónimo que se ha hecho popular entre los jóvenes y que significa 
 
 
 Liga de figma: https://www.figma.com/file/TtcW5Iw2iWbDYY0ZNEKqTe/y-si...-team-library?node-id=0%3A1 
+
 Liga del documento: https://docs.google.com/document/d/1PdNs4wbRIDClXXBLKiyZuq7L7dPPvqWX/edit?usp=sharing&ouid=105886837138461202618&rtpof=true&sd=true
