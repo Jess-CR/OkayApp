@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LogIn"
-    android:background="@color/grey_background">
+    android:background="@color/lighter_gray">
 
     <TextView
         android:id="@+id/log_in_txt_email"
@@ -71,8 +71,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="@string/log_in_forgotpassword"
-        android:textColor="@color/grey_letters"
+        android:textColor="@color/yolo_blue"
         android:textSize="11dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/log_in_editText_password" />
@@ -90,14 +91,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/log_in_txt_forgot" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_up_btn_logIn"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="316dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="92dp"
+        android:backgroundTint="@color/blue_botton"
         android:hint="@string/log_in_button"
+        android:text="@string/log_in_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/log_in_chkBox_remember" />
-
+        app:layout_constraintTop_toBottomOf="@+id/log_in_chkBox_remember"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

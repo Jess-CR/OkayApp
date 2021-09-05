@@ -8,39 +8,46 @@
     tools:context=".Menu">
 
 
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menu_btn_logIn"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="512dp"
+        android:layout_width="316dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="116dp"
         android:backgroundTint="@color/blue_botton"
-        android:text="@string/menu_login"
+        android:text="@string/log_in_button"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/logoMenu"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/logoMenu" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menu_btn_signUp"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/button_borderblue"
+        android:layout_width="316dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="192dp"
+        android:backgroundTint="@color/white"
         android:text="@string/menu_sign_up"
         android:textColor="@color/blue_botton"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/logoMenu"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_btn_logIn" />
-
+        app:layout_constraintTop_toBottomOf="@+id/logoMenu"
+        app:strokeColor="@color/blue_botton"
+        app:strokeWidth="2dp" />
 
     <ImageView
         android:id="@+id/logoMenu"
         android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:layout_marginTop="204dp"
         app:layout_constraintBottom_toTopOf="@+id/menu_btn_logIn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/menu_img_logo" />

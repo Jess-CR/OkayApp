@@ -14,7 +14,29 @@
     <color name="purple">#663399</color>
     <color name="purple_background">#E5DDEE</color>
     <color name="blue_botton">#4ABCCC</color>
+    <color name="lighter_gray">#F6F6F6</color>
 
+//Colores de la paleta propuesta
+
+    <color name="yolo_yellow">#F8C731</color>
+    <color name="yolo_yellow_dark">#B2912D</color>
+    <color name="yolo_yellow_light">#FADA76</color>
+
+    <color name="yolo_orange">#F66732</color>
+    <color name="yolo_orange_dark">#A34B2B</color>
+    <color name="yolo_orange_light">#FFAE8F</color>
+
+    <color name="yolo_red">#E8384B</color>
+    <color name="yolo_red_dark">#872631</color>
+    <color name="yolo_red_light">#E47884</color>
+
+    <color name="yolo_purple">#663399</color>
+    <color name="yolo_purple_dark">#301849</color>
+    <color name="yolo_purple_light">#C394F3</color>
+
+    <color name="yolo_blue">#4ABCCC</color>
+    <color name="yolo_blue_dark">#267883</color>
+    <color name="yolo_blue_light">#A1E7F1</color>
 
 
 </resources>
