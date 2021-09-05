@@ -22,6 +22,12 @@
             android:name=".Menu"
             android:exported="true" />
         <activity
+            android:name=".categories"
+            android:exported="true" />
+        <activity
+            android:name=".Topic"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
