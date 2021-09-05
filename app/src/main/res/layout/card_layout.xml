@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ketzalli
+no implementada-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_margin="12dp"
+    card_view:cardBackgroundColor="#CACACA"
+    card_view:cardCornerRadius="20dp"
+    card_view:cardElevation="6dp"
+    card_view:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="559dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/pregunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp"
+            android:text="pregunta"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#555555"
+            android:textSize="15dp">
+<!--            android:fontFamily="@font/roboto"-->
+        </TextView>
+
+        <!--<ImageView
+            android:id="@+id/imagen"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/pregunta"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="29dp"
+            android:layout_marginBottom="13dp"
+            android:src="@drawable/imgprueba" />-->
+
+        <Button
+            android:id="@+id/boton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pregunta"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginRight="13dp"
+            android:backgroundTint="#F66732"
+            android:text="opcion 1" />
+
+        <Button
+            android:id="@+id/boton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boton2"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="13dp"
+            android:backgroundTint="#F66732"
+            android:text="opcion 3" />
+
+        <Button
+            android:id="@+id/boton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boton1"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="13dp"
+            android:backgroundTint="#F66732"
+            android:text="opcion 2" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="203dp"
+            android:layout_height="46dp"
+            android:layout_below="@+id/boton3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="114dp"
+            android:layout_marginTop="188dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="40dp"
+            android:text="Actualizar" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
