@@ -1,13 +1,14 @@
-package Trivia
+package org.bedu.okayapp
 //ketzalli
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.example.proyectobedufase3_prueba2.MainActivity
-import com.example.proyectobedufase3_prueba2.databinding.ActivityMainBinding
-import com.example.proyectobedufase3_prueba2.databinding.ActivityResultadoBinding
+//si todas las respuestas fueron correctas se otorga una insignia
+//la insignia no esta implementada
 
-class resultado : AppCompatActivity() {
+import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import org.bedu.okayapp.databinding.ActivityResultadoBinding
+
+class Resultado : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityResultadoBinding.inflate(layoutInflater)
@@ -15,7 +16,7 @@ class resultado : AppCompatActivity() {
         setContentView(view)
 
         binding.continuar.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, categories::class.java)
             startActivity(intent)
         }
     }

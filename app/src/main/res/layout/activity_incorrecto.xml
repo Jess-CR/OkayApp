@@ -1,56 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--ketzalli-->
-<com.google.android.material.card.MaterialCardView android:id="@+id/card"
+<!--ketzalli
+muestra que alguna respuesta fue incorrecta-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/teal_200">
+        android:layout_height="match_parent"
+        android:background="#F2F1F1"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Title, secondary and supporting text -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="125dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/think_emoji" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sigue intentando"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bowlby_one"
+                android:text="Revisa tus respuestas"
                 android:textAlignment="center"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#663399" />
 
-            <!-- Media -->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/thump_up_emoji"
-                android:scaleType="center"
-                />
-
-        </LinearLayout>
-
-        <!-- Buttons -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/continuar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="continuar"
-                />
         </LinearLayout>
 
     </LinearLayout>
