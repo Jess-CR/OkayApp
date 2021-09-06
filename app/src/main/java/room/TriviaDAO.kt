@@ -1,8 +1,9 @@
-package com.example.proyectobedufase3_prueba1.room
+package room
 //ketzalli
-//version de prueba de base de datos
-//no implementada
+//queries para manejar la base de datos
+//no implementado
 import androidx.room.*
+import room.SexualEducation
 
 @Dao
 interface TriviaDAO {

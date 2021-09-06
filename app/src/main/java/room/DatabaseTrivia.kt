@@ -1,7 +1,7 @@
-package com.example.proyectobedufase3_prueba1.room
+package room
 //ketzalli
-//version de prueba de base de datos
-//no implementada
+//base de datos para las preguntas
+//no implementado
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
@@ -13,26 +13,19 @@ import androidx.room.RoomDatabase
 )
 
 abstract class DatabaseTrivia : RoomDatabase() {
+    abstract fun TriviaDAO(): TriviaDAO
 
     companion object {
-        private var dbInstance: DatabaseTrivia? = null
-
-        const val DB_NAME = "Database_Trivia"
+        private var INSTANCE: DatabaseTrivia? = null
 
         fun getInstance(context: Context): DatabaseTrivia {
-            if (dbInstance == null) {
-                synchronized(DatabaseTrivia::class) {
-                    dbInstance = Room.databaseBuilder(
-                        context.applicationContext,
-                        DatabaseTrivia::class.java,
-                        DB_NAME
-                    )
-                        .fallbackToDestructiveMigration()
-                        .build()
-                }
+            if (INSTANCE == null) {
+                INSTANCE = Room.databaseBuilder(
+                    context.applicationContext,
+                    DatabaseTrivia::class.java, "database-name"
+                ).build()
             }
-            return dbInstance!!
+            return INSTANCE!!
         }
     }
-    abstract fun triviaDao():TriviaDAO
 }
