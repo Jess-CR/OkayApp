@@ -27,4 +27,14 @@
     <string name="log_in_forgotpassword"><u>¿Olvidaste tu contraseña?</u></string>
     <string name="log_in_remember">Recordarme en este dispositivo</string>
     <string name="log_in_button">Iniciar Sesión</string>
+
+
+    <!-- ***************** Categorias**************** -->
+    <string-array name="Categorias">
+        <item>Salud sexual</item>
+        <item>Finanzas</item>
+        <item>Vida laboral</item>
+        <item>Medio ambiente</item>
+        <item>Salud</item>
+    </string-array>
 </resources>
