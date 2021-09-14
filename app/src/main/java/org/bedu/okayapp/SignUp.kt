@@ -30,7 +30,7 @@ class SignUp : AppCompatActivity() {
         sign_up_editText_email=findViewById(R.id.sign_up_editText_email)
         sign_up_editText_password=findViewById(R.id.sign_up_editText_password)
         sign_up_editText_passwordConfirmation=findViewById(R.id.sign_up_editText_passwordConfirmation)
-        //sign_up_numPicker_age=findViewById(R.id.sign_up_numPicker_age)
+        sign_up_numPicker_age=findViewById(R.id.sign_up_numPicker_age)
         sign_up_editText_profession=findViewById(R.id.sign_up_editText_profession)
         sign_up_numPicker_age.minValue=0
         sign_up_numPicker_age.maxValue=99

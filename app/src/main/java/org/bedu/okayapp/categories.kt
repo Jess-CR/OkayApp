@@ -11,7 +11,7 @@ import android.widget.ListView
 
 class categories : AppCompatActivity() {
 
-    private lateinit var listaCategorias:ListView
+    private lateinit var listaCategorias: ListView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
@@ -19,17 +19,19 @@ class categories : AppCompatActivity() {
         val servicio1 = resources.getStringArray(R.array.Categorias)
         listaCategorias = findViewById(R.id.listaCategorias)
 
-        arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,servicio1)
+        arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, servicio1)
         listaCategorias.adapter = arrayAdapter
 
-        listaCategorias.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            val intent = Intent(this,Topic::class.java)
-            startActivity(intent)
-        }
+        listaCategorias.onItemClickListener =
+            AdapterView.OnItemClickListener { parent, view, position, id ->
+                val intent = Intent(this, Topic::class.java)
+                startActivity(intent)
+            }
 
 
     }
-    fun progreso(view: View){
-        startActivity(Intent(this,Progress::class.java))
+
+    fun progreso(view: View) {
+        startActivity(Intent(this, Progress::class.java))
     }
 }
