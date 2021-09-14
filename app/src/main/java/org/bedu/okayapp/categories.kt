@@ -16,11 +16,11 @@ class categories : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
         val arrayAdapter: ArrayAdapter<*>
-//        val servicio1 = resources.getStringArray(R.array.Categorias)
+        val servicio1 = resources.getStringArray(R.array.Categorias)
         listaCategorias = findViewById(R.id.listaCategorias)
 
-//        arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,servicio1)
-//        listaCategorias.adapter = arrayAdapter
+        arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,servicio1)
+        listaCategorias.adapter = arrayAdapter
 
         listaCategorias.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
             val intent = Intent(this,Topic::class.java)
