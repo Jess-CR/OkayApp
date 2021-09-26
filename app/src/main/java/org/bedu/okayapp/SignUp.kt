@@ -15,8 +15,8 @@ class SignUp : AppCompatActivity() {
     private lateinit var sign_up_editText_email:EditText
     private lateinit var sign_up_editText_password:EditText
     private lateinit var sign_up_editText_passwordConfirmation:EditText
-    private lateinit var sign_up_numPicker_age:NumberPicker
     private lateinit var sign_up_editText_profession:EditText
+    private lateinit var sign_up_editText_date:EditText
 
     //Intenté poner el dropdown menu para seleccionar Estudiante o profesor
     //private val binding get() = binding!!
@@ -30,10 +30,11 @@ class SignUp : AppCompatActivity() {
         sign_up_editText_email=findViewById(R.id.sign_up_editText_email)
         sign_up_editText_password=findViewById(R.id.sign_up_editText_password)
         sign_up_editText_passwordConfirmation=findViewById(R.id.sign_up_editText_passwordConfirmation)
-        sign_up_numPicker_age=findViewById(R.id.sign_up_numPicker_age)
         sign_up_editText_profession=findViewById(R.id.sign_up_editText_profession)
-        sign_up_numPicker_age.minValue=0
-        sign_up_numPicker_age.maxValue=99
+        sign_up_editText_date=findViewById(R.id.sign_up_editText_date)
+
+        sign_up_editText_date.setOnClickListener{showDatePicker()}
+
 
         //Esta es la funcionalidad para el Dropdown menu
         /*val profession = resources.getStringArray(R.array.profession)
@@ -42,5 +43,14 @@ class SignUp : AppCompatActivity() {
 
         return binding.root*/
 
+    }
+
+    private fun showDatePicker() {
+        val datePicker = DatePickerFragment {day, month, year -> onDateSelected(day, month, year)}
+        datePicker.show(supportFragmentManager,"datePicker")
+    }
+
+    fun onDateSelected(day:Int, month:Int, year:Int){
+        sign_up_editText_date.setText("$day / $month / $year")
     }
 }

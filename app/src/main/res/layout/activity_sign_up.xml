@@ -12,11 +12,11 @@
         android:id="@+id/sign_up_txt_title"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:text="@string/sign_up_title"
         android:textColor="@color/purple"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,83 +25,78 @@
         android:id="@+id/sign_up_editText_username"
         android:layout_width="340dp"
         android:layout_height="48dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="@string/sign_up_user_name_ph"
         android:inputType="textPersonName"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:textColor="@color/grey_placeholders"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_txt_title" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
 
     <EditText
         android:id="@+id/sign_up_editText_email"
         android:layout_width="340dp"
         android:layout_height="48dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="148dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="@string/sign_up_email_ph"
         android:inputType="textEmailAddress"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:textColor="@color/grey_placeholders"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_username" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/sign_up_editText_password"
         android:layout_width="340dp"
         android:layout_height="48dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="212dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="@string/sign_up_password_ph"
         android:inputType="textPassword"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:textColor="@color/grey_placeholders"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_email" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/sign_up_editText_passwordConfirmation"
         android:layout_width="340dp"
         android:layout_height="48dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="288dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="@string/sign_up_password_confirmation_ph"
         android:inputType="textPassword"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:textColor="@color/grey_placeholders"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_password" />
-
-
-    <NumberPicker
-        android:id="@+id/sign_up_numPicker_age"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/white"
-        android:paddingLeft="20dp"
-        android:scrollbarSize="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_passwordConfirmation" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_up_btn_continuar"
@@ -116,21 +111,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949" />
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.AppCompat.Light.ListView.DropDown"
         android:id="@+id/textInputLayout"
+        style="@style/Widget.AppCompat.Light.ListView.DropDown"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="41dp"
         app:layout_constraintBottom_toTopOf="@+id/sign_up_btn_continuar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_numPicker_age">
+        app:layout_constraintStart_toStartOf="parent">
 
         <AutoCompleteTextView
 
@@ -142,11 +136,33 @@
             android:backgroundTint="@color/white"
             android:hint="@string/sign_up_profession_ph"
             android:inputType="none"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
             android:textColor="@color/grey_placeholders"
-            android:textSize="15dp" />
+            android:textSize="15sp"
+            tools:ignore="RtlSymmetry" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/sign_up_editText_date"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="352dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/grey_placeholders"
+        android:textSize="15sp"
+        android:ems="10"
+        android:inputType="date"
+        android:paddingStart="20dp"
+        android:hint="Fecha de nacimiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="false"
+        android:focusable="false"
+        tools:ignore="RtlSymmetry" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
