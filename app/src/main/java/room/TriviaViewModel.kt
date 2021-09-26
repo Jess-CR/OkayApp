@@ -3,9 +3,6 @@ package room
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class TriviaViewModel(application: Application):AndroidViewModel(application) {
 
@@ -17,7 +14,7 @@ class TriviaViewModel(application: Application):AndroidViewModel(application) {
         readAllData = repository.readAllData
     }
 
-    /*fun addItem(trivia: Trivia){
+    /*fun addItem(trivia: org.bedu.okayapp.Trivia){
         viewModelScope.launch(Dispatchers.IO) {
             repository.addItem(trivia)
         }

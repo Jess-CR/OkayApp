@@ -1,11 +1,10 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Inicio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.widget.Button
-import android.widget.ImageView
+import org.bedu.okayapp.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         //Agregar Handler para que automáticamente después de 2.5 seg pase a la act. Menu
       Handler().postDelayed({
-          val intent = Intent(this@MainActivity,Menu::class.java)
+          val intent = Intent(this@MainActivity, Menu::class.java)
           startActivity(intent)
           finish()
       }, 3500)

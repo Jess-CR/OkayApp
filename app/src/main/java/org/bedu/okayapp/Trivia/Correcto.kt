@@ -1,4 +1,4 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Trivia
 //ketzalli
 //se muestra cuando todas las respuestas fueron correctas
 

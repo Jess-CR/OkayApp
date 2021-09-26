@@ -1,12 +1,11 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Inicio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.NumberPicker
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
+import org.bedu.okayapp.R
 
 class SignUp : AppCompatActivity() {
 

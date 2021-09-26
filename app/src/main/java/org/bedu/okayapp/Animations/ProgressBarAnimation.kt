@@ -1,7 +1,6 @@
-package Animations
+package org.bedu.okayapp.Animations
 
 import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.view.animation.DecelerateInterpolator
 import android.widget.ProgressBar

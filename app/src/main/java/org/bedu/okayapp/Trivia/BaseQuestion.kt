@@ -1,13 +1,12 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Trivia
 //ketzalli
 //agrega contenido al recyclerview
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.ListAdapter
 import org.bedu.okayapp.databinding.ActivityBaseQuestionBinding
 import room.TriviaViewModel
 

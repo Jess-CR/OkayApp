@@ -10,39 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OkayApp">
         <activity
-            android:name=".Progress"
+            android:name="org.bedu.okayapp.Progreso.Progress"
             android:exported="true" />
         <activity
-            android:name=".LogIn"
+            android:name="org.bedu.okayapp.Inicio.LogIn"
             android:exported="true" />
         <activity
-            android:name=".SignUp"
+            android:name="org.bedu.okayapp.Inicio.SignUp"
             android:exported="true" />
         <activity
-            android:name=".Menu"
+            android:name="org.bedu.okayapp.Inicio.Menu"
             android:exported="true" />
         <activity
-            android:name=".categories"
+            android:name="org.bedu.okayapp.Temas.categories"
             android:exported="true" />
         <activity
-            android:name=".Topic"
+            android:name="org.bedu.okayapp.Temas.Topic"
             android:exported="true" />
         <!--ketzalli-->
         <activity
-            android:name=".BaseQuestion"
+            android:name="org.bedu.okayapp.Trivia.BaseQuestion"
             android:exported="true" />
         <activity
-            android:name=".Correcto"
+            android:name="org.bedu.okayapp.Trivia.Correcto"
             android:exported="true" />
         <activity
-            android:name=".Resultado"
+            android:name="org.bedu.okayapp.Trivia.Resultado"
             android:exported="true" />
         <activity
-            android:name=".Incorrecto"
+            android:name="org.bedu.okayapp.Trivia.Incorrecto"
             android:exported="true" />
         <!--hasta aqui-->
         <activity
-            android:name=".MainActivity"
+            android:name="org.bedu.okayapp.Inicio.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

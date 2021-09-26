@@ -1,4 +1,4 @@
-package Animations
+package org.bedu.okayapp.Animations
 
 import androidx.lifecycle.ViewModel
 

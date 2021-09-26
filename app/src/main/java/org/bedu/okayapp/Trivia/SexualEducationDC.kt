@@ -1,4 +1,4 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Trivia
 //ketzalli
 //Datos que se usaran para Recyclerview y manejo del proceso
 

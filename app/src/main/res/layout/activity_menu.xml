@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/menu_background"
-    tools:context=".Menu">
+    tools:context="org.bedu.okayapp.Inicio.Menu">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/menu_btn_logIn"
