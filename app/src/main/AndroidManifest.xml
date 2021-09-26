@@ -10,39 +10,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OkayApp">
         <activity
-            android:name="org.bedu.okayapp.Progreso.Progress"
+            android:name=".Inicio.Profile"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Inicio.LogIn"
+            android:name=".Progreso.Progress"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Inicio.SignUp"
+            android:name=".Inicio.LogIn"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Inicio.Menu"
+            android:name=".Inicio.SignUp"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Temas.categories"
+            android:name=".Inicio.Menu"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Temas.Topic"
-            android:exported="true" />
-        <!--ketzalli-->
-        <activity
-            android:name="org.bedu.okayapp.Trivia.BaseQuestion"
+            android:name=".Temas.categories"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Trivia.Correcto"
+            android:name=".Temas.Topic"
+            android:exported="true" /> <!-- ketzalli -->
+        <activity
+            android:name=".Trivia.BaseQuestion"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Trivia.Resultado"
+            android:name=".Trivia.Correcto"
             android:exported="true" />
         <activity
-            android:name="org.bedu.okayapp.Trivia.Incorrecto"
+            android:name=".Trivia.Resultado"
             android:exported="true" />
-        <!--hasta aqui-->
         <activity
-            android:name="org.bedu.okayapp.Inicio.MainActivity"
+            android:name=".Trivia.Incorrecto"
+            android:exported="true" /> <!-- hasta aqui -->
+        <activity
+            android:name=".Inicio.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
