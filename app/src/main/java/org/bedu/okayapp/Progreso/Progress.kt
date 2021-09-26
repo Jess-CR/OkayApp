@@ -1,15 +1,10 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Progreso
 
-import Animations.ProgressBarAnimation
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
+import org.bedu.okayapp.Animations.ProgressBarAnimation
+import org.bedu.okayapp.Trivia.BaseQuestion
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.animation.DecelerateInterpolator
-import android.widget.ProgressBar
-import androidx.core.widget.doAfterTextChanged
 import org.bedu.okayapp.databinding.ActivityProgressBinding
 
 class Progress : AppCompatActivity() {

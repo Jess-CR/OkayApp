@@ -1,6 +1,6 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Temas
 
-import Animations.ProgressBarAnimation
+import org.bedu.okayapp.Animations.ProgressBarAnimation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import org.bedu.okayapp.Progreso.Progress
+import org.bedu.okayapp.R
 import org.bedu.okayapp.databinding.ActivityCategoriesBinding
 
 

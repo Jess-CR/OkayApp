@@ -1,4 +1,4 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Trivia
 //ketzalli
 //se muestra cuando hubo respuestas incorrectas
 
@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import org.bedu.okayapp.Temas.categories
 import org.bedu.okayapp.databinding.ActivityIncorrectoBinding
 
 class Incorrecto : AppCompatActivity() {

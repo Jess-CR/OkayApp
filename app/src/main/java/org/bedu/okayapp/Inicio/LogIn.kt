@@ -1,9 +1,11 @@
-package org.bedu.okayapp
+package org.bedu.okayapp.Inicio
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import org.bedu.okayapp.R
+import org.bedu.okayapp.Temas.categories
 
 class LogIn : AppCompatActivity() {
     private lateinit var sign_up_btn_logIn:Button
