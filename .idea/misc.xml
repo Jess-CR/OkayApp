@@ -3,28 +3,66 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_base_question.xml" value="0.23333333333333334" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_categories.xml" value="0.536" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_correcto.xml" value="0.23333333333333334" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_incorrecto.xml" value="0.23072916666666668" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_menu.xml" value="0.23072916666666668" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_progress.xml" value="0.4" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_resultado.xml" value="0.23072916666666668" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/activity_topic.xml" value="0.23072916666666668" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/dropdown_item.xml" value="0.23072916666666668" />
+        <entry key="..\:/Bedu/ProyectoFinal/OkayApp/app/src/main/res/layout/dropdown_profession.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_base_question.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_categories.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_correcto.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_incorrecto.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_list.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_menu.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_progress.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_question.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_resultado.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_topic.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/card_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/dropdown_item.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/OkayApp/app/src/main/res/layout/dropdown_profession.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_categories.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_incorrecto.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_progress.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_resultado.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_topic.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/card_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/dropdown_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/dropdown_profession.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/drawable/button_borderblue.xml" value="0.1" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/drawable/roundstyle.xml" value="0.2703125" />
-        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.1" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.2" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_menu.xml" value="0.136" />
-        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_progress.xml" value="0.264" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_sign_up.xml" value="0.1864406779661017" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_topic.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/dropdown_item.xml" value="0.1" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/profile.xml" value="0.19427083333333334" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21041666666666667" />
+        <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/drawable/ic_menu_img_logo.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/drawable/ic_yolointro.xml" value="0.153125" />
-        <entry key="app/src/main/res/drawable/roundstyle.xml" value="0.1796875" />
-        <entry key="app/src/main/res/layout/activity_base_question.xml" value="0.11277173913043478" />
-        <entry key="app/src/main/res/layout/activity_categories.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_correcto.xml" value="0.16259057971014493" />
         <entry key="app/src/main/res/layout/activity_log_in.xml" value="0.2709453970132078" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_progress.xml" value="0.1068840579710145" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15625" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.2389750899454507" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/card_layout.xml" value="0.16259057971014493" />
         <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.20819883384829715" />
         <entry key="app/src/main/res/layout/dropdown_profession.xml" value="0.19746376811594202" />
       </map>
