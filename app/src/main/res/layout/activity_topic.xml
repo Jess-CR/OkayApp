@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="SALUD SEXUAL Y REPRODUCTIVA"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/yolo_orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
