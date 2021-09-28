@@ -5,6 +5,9 @@
     <string name="menu_login">Iniciar Sesión</string>
     <string name="menu_sign_up">Registrarse</string>
 
+    <!-- ***************** Pantalla Profile *************** -->
+    <string name="profile_button">Tomar fotografía</string>
+
     <!-- ***************** Pantalla SignUp *************** -->
     <string name="sign_up_title">Crea tu cuenta</string>
     <string name="sign_up_user_name_ph">Nombre de usuario</string>
