@@ -38,19 +38,6 @@ class SignUp : AppCompatActivity() {
         sign_up_btn_continue=findViewById(R.id.sign_up_btn_continue)
         sign_up_editText_date.setOnClickListener{showDatePicker()}
 
-
-        //Esta es la funcionalidad para el Dropdown menu
-        /*val profession = resources.getStringArray(R.array.profession)
-        val arrayAdapter= ArrayAdapter (requireContext(),R.layout.dropdown_item,profession)
-        binding.autoCompleteTextView.setAdapter(ArrayAdapter)
-
-        return binding.root*/
-
-//        sign_up_RadioGroup.setOnCheckedChangeListener{sign_up_Radiogroup, i ->
-  //          var rb = findViewById<RadioGroup>(i)
-    //    }
-
-
         activity_signUp()
     }
 

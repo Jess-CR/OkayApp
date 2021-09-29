@@ -30,6 +30,9 @@ class DatePickerFragment(val listener: (day:Int, month: Int, year:Int) -> Unit):
 
         val picker=DatePickerDialog(activity as Context, this, year,month, day)
         //timeInMillis, fecha actual en minisegundos
+        picker.datePicker.maxDate= calendar.timeInMillis
+
+
         return picker
     }
 
