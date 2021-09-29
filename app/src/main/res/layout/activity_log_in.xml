@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/log_in_txt_forgot" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_up_btn_logIn"
+        android:id="@+id/log_in_btn_logIn"
         android:layout_width="316dp"
         android:layout_height="64dp"
         android:layout_marginTop="92dp"

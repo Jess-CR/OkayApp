@@ -99,7 +99,7 @@
         tools:ignore="RtlSymmetry" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_up_btn_continuar"
+        android:id="@+id/sign_up_btn_continue"
         android:layout_width="316dp"
         android:layout_height="64dp"
         android:backgroundTint="@color/yolo_purple"

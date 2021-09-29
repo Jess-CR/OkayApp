@@ -8,11 +8,11 @@ import org.bedu.okayapp.R
 import org.bedu.okayapp.Temas.categories
 
 class LogIn : AppCompatActivity() {
-    private lateinit var sign_up_btn_logIn:Button
+    private lateinit var log_in_btn_logIn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
-        sign_up_btn_logIn= findViewById(R.id.sign_up_btn_logIn)
+        log_in_btn_logIn =findViewById(R.id.log_in_btn_logIn)
 
         activity_logIn()
         /*DEBUG ALOPEZ
@@ -21,7 +21,7 @@ class LogIn : AppCompatActivity() {
     }
 
     fun activity_logIn(){
-        sign_up_btn_logIn.setOnClickListener {
+        log_in_btn_logIn.setOnClickListener {
             val ventanacategorias: Intent = Intent(this, categories::class.java)
             startActivity(ventanacategorias)
         }

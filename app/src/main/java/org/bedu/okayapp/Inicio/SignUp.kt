@@ -18,7 +18,7 @@ class SignUp : AppCompatActivity() {
     private lateinit var signup_radioButton_student: RadioButton
     private lateinit var signup_radioButton_professor: RadioButton
     private lateinit var sign_up_editText_date:EditText
-    private lateinit var sign_up_btn_continuar:Button
+    private lateinit var sign_up_btn_continue:Button
 
 
 
@@ -35,7 +35,7 @@ class SignUp : AppCompatActivity() {
         signup_radioButton_student=findViewById(R.id.signup_radioButton_student)
         sign_up_editText_date=findViewById(R.id.sign_up_editText_date)
         sign_up_RadioGroup=findViewById(R.id.sign_up_RadioGroup)
-
+        sign_up_btn_continue=findViewById(R.id.sign_up_btn_continue)
         sign_up_editText_date.setOnClickListener{showDatePicker()}
 
 
@@ -64,7 +64,7 @@ class SignUp : AppCompatActivity() {
     }
 
     fun activity_signUp(){
-        sign_up_btn_continuar.setOnClickListener {
+        sign_up_btn_continue.setOnClickListener {
             val ventanaLogIn: Intent = Intent(this, LogIn::class.java)
             startActivity(ventanaLogIn)
         }
