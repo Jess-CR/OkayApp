@@ -3,80 +3,93 @@
 contiene el contenido individual de cada recyclerview-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="12dp">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F2F1F1"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/pregunta"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginBottom="13dp"
-            android:fontFamily="@font/roboto"
-            android:text="pregunta"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#555555"
-            android:textSize="15dp" />
+            android:layout_height="match_parent"
+            android:background="#50BCCB"
+            android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/imagen"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_below="@+id/pregunta"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="13dp"
-            android:layout_marginLeft="29dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginRight="29dp"
-            android:layout_marginBottom="13dp"
-            android:src="@drawable/imgprueba" />
+            <TextView
+                android:id="@+id/pregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="13dp"
+                android:fontFamily="@font/roboto"
+                android:text="pregunta"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
 
-        <Button
-            android:id="@+id/boton1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imagen"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:backgroundTint="#F66732"
-            android:text="opcion 1"
-            app:cornerRadius="16px" />
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/pregunta"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="13dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="29dp"
+                android:layout_marginBottom="13dp"
+                android:src="@drawable/imgprueba" />
 
-        <Button
-            android:id="@+id/boton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/boton2"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="13dp"
-            android:backgroundTint="#F66732"
-            android:text="opcion 3"
-            app:cornerRadius="16px" />
+            <Button
+                android:id="@+id/boton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagen"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:backgroundTint="#F66732"
+                android:text="opcion 1"
+                app:cornerRadius="10dp" />
 
-        <Button
-            android:id="@+id/boton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/boton1"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="13dp"
-            android:backgroundTint="#F66732"
-            android:text="opcion 2"
-            app:cornerRadius="16px" />
+            <Button
+                android:id="@+id/boton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/boton2"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#F66732"
+                android:text="opcion 3"
+                app:cornerRadius="10dp" />
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/boton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/boton1"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="13dp"
+                android:backgroundTint="#F66732"
+                android:text="opcion 2"
+                app:cornerRadius="10dp" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
