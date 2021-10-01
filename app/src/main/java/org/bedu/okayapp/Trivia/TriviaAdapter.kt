@@ -1,12 +1,5 @@
 package org.bedu.okayapp.Trivia
-/*
-ketzalli
-se encarga de hacer funcionar los recyclerview de las preguntas
-
-pendientes:
-implementar la seleccion aleatoria de preguntas (sin repetirse)
-implementar la base de datos
- */
+//ketzalli
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -17,37 +10,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.bedu.okayapp.R
-import room.Trivia
 
 //variables de control
 var correctas: Int = 0
 var intentos: Int = 0
 
-private lateinit var contexto: Context
+class viewpagerAdapter(
+    private var listaSE: ArrayList<SexualEducationDC>,
+    private var contexto: Context
+) : RecyclerView.Adapter<viewpagerAdapter.Pager2ViewHolder>() {
 
-class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.ViewHolder>() {
-    private var triviaList = emptyList<Trivia>()
-    fun setData(trivia: List<Trivia>) {
-        this.triviaList = trivia
-        notifyDataSetChanged()
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
-        )
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(triviaList[position])
-    }
-
-    override fun getItemCount(): Int {
-        return triviaList.size
-    }
-
-    class ViewHolder(private var view: View) :
-        RecyclerView.ViewHolder(view) {
+    inner class Pager2ViewHolder(var itemView: View, var contexto: Context):RecyclerView.ViewHolder(itemView){
         //declarar variables
         val pregunta: TextView
         val imagen: ImageView
@@ -58,30 +31,29 @@ class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.ViewHolder>() {
 
         //inicializar variables
         init {
-            pregunta = view.findViewById(R.id.pregunta)
-            imagen = view.findViewById(R.id.imagen)
-            boton1 = view.findViewById(R.id.boton1)
-            boton2 = view.findViewById(R.id.boton2)
-            boton3 = view.findViewById(R.id.boton3)
+            pregunta = itemView.findViewById(R.id.pregunta)
+            imagen = itemView.findViewById(R.id.imagen)
+            boton1 = itemView.findViewById(R.id.boton1)
+            boton2 = itemView.findViewById(R.id.boton2)
+            boton3 = itemView.findViewById(R.id.boton3)
             resCorrecta = 0
         }
 
-
-        fun bind(trivia: Trivia) {
+        fun bind(sexualEducationDC: SexualEducationDC) {
             //asignar los valores a su respectivo componente
-            pregunta.text = trivia.triviaQuestion
-            imagen.setImageResource(R.drawable.imgprueba)
-            boton1.text = trivia.option1
-            boton2.text = trivia.option2
-            boton3.text = trivia.option3
-            resCorrecta = trivia.correctAnswer!!
+            pregunta.text = sexualEducationDC.questions
+            imagen.setImageResource(sexualEducationDC.imageQ)
+            boton1.text = sexualEducationDC.options1
+            boton2.text = sexualEducationDC.options2
+            boton3.text = sexualEducationDC.options3
+            resCorrecta = sexualEducationDC.resCorrecta
 
-            //errores al determinar la respuesta correcta (usar query para actualizar dato)
-            fun answerValidate(userResp: Int, resCorrecta: Int?) {
-                trivia.userAnswer = userResp
+            //funcion que valida cada respuesta ingresada
+            fun answerValidate(userResp: Int, resCorrecta: Int) {
+                sexualEducationDC.userResp = userResp
                 intentos++
                 //si la respuesta es correcta
-                if (trivia.userAnswer == resCorrecta) {
+                if (userResp == resCorrecta) {
                     correctas++
                 }
                 //si las 3 respuestas son correctas
@@ -113,4 +85,23 @@ class TriviaAdapter() : RecyclerView.Adapter<TriviaAdapter.ViewHolder>() {
             }
         }
     }
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): Pager2ViewHolder {
+        return Pager2ViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.card_layout,parent,false),
+            contexto
+        )
+    }
+
+    override fun onBindViewHolder(holder: Pager2ViewHolder, position: Int) {
+        holder.bind(listaSE[position])
+    }
+
+    override fun getItemCount(): Int {
+        return listaSE.size
+    }
+
 }
