@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "968009952958",
+    "project_id": "okayapp-96f6a",
+    "storage_bucket": "okayapp-96f6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968009952958:android:b16cd268c3d462806cb8ef",
+        "android_client_info": {
+          "package_name": "org.bedu.okayapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968009952958-jk58sihrviep010obsj256l835m682ti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.bedu.okayapp",
+            "certificate_hash": "dbb7cf2551fa26ac2b1373c72e50b8cb92e913ba"
+          }
+        },
+        {
+          "client_id": "968009952958-viavq65rjqngoc0c5ssoeorhcc8s29dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTBy-Hr234uSA-z9OM8R7HVrYzkFQIS_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968009952958-viavq65rjqngoc0c5ssoeorhcc8s29dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
