@@ -26,6 +26,8 @@
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="182dp"
         android:layout_height="62dp"
+        android:layout_below="@+id/view_pager2"
+        android:layout_alignRight="@+id/view_pager2"
         android:layout_marginLeft="13dp"
         android:layout_marginRight="13dp"
         android:backgroundTint="#50BCCB"
@@ -34,9 +36,7 @@
         app:icon="@drawable/arrow_next2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@+id/view_pager2"
-        android:layout_alignRight="@+id/view_pager2"/>
+        app:layout_constraintStart_toStartOf="parent" />
     <!--        android:layout_above="@+id/indicator"/>-->
 
 </RelativeLayout>

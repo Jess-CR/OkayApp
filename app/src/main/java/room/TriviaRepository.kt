@@ -9,5 +9,9 @@ class TriviaRepository (private val triviaDao: TriviaDao){
     /*suspend fun addItem(trivia: org.bedu.okayapp.Trivia){
         triviaDao.addUser(trivia)
     }*/
+    suspend fun updateItem(trivia: Trivia){
+        triviaDao.updateItem(trivia)
+    }
+
 
 }

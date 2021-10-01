@@ -9,16 +9,24 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import org.bedu.okayapp.R
+import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
+import room.Trivia
+import room.TriviaViewModel
 
 //variables de control
 var correctas: Int = 0
 var intentos: Int = 0
-
+//private var listaSE: ArrayList<SexualEducationDC>
 class viewpagerAdapter(
-    private var listaSE: ArrayList<SexualEducationDC>,
     private var contexto: Context
 ) : RecyclerView.Adapter<viewpagerAdapter.Pager2ViewHolder>() {
+    private var triviaList = emptyList<Trivia>()
+    fun setData(trivia: List<Trivia>) {
+        this.triviaList = trivia
+        notifyDataSetChanged()
+    }
 
     inner class Pager2ViewHolder(var itemView: View, var contexto: Context):RecyclerView.ViewHolder(itemView){
         //declarar variables
@@ -28,6 +36,7 @@ class viewpagerAdapter(
         val boton2: Button
         val boton3: Button
         var resCorrecta: Int
+
 
         //inicializar variables
         init {
@@ -39,49 +48,75 @@ class viewpagerAdapter(
             resCorrecta = 0
         }
 
-        fun bind(sexualEducationDC: SexualEducationDC) {
+
+        fun bind(trivia: Trivia) {
             //asignar los valores a su respectivo componente
-            pregunta.text = sexualEducationDC.questions
-            imagen.setImageResource(sexualEducationDC.imageQ)
-            boton1.text = sexualEducationDC.options1
-            boton2.text = sexualEducationDC.options2
-            boton3.text = sexualEducationDC.options3
-            resCorrecta = sexualEducationDC.resCorrecta
+            //asignar los valores a su respectivo componente
+            pregunta.text = trivia.triviaQuestion
+            Picasso.get().load(trivia.image).into(imagen)
+            // imagen.setImageResource(R.drawable.imgprueba)
+            boton1.text = trivia.option1
+            boton2.text = trivia.option2
+            boton3.text = trivia.option3
+            resCorrecta = trivia.correctAnswer!!
+
 
             //funcion que valida cada respuesta ingresada
             fun answerValidate(userResp: Int, resCorrecta: Int) {
-                sexualEducationDC.userResp = userResp
+
+                trivia.userAnswer = userResp
                 intentos++
                 //si la respuesta es correcta
                 if (userResp == resCorrecta) {
                     correctas++
                 }
                 //si las 3 respuestas son correctas
-                if (correctas == 3) {
+                if (correctas == triviaList.size) {
                     correctas = 0
                     intentos = 0
                     contexto.startActivity(Intent(contexto, Correcto::class.java))
                 }
                 //si los intentos llegan a 3
-                if (correctas != 3 && intentos == 3) {
+                if (correctas != triviaList.size && intentos == 3) {
                     correctas = 0
                     intentos = 0
                     contexto.startActivity(Intent(contexto, Incorrecto::class.java))
                 }
                 //desactiva los botones de la pregunta que se respondio
-                boton1.isEnabled = (false)
-                boton2.isEnabled = (false)
-                boton3.isEnabled = (false)
+                boton1.isEnabled = false
+                boton2.isEnabled = false
+                boton3.isEnabled = false
+
+
+
             }
             //acciones al clickear en los botones de opciones
+            lateinit var triviaEdit:Trivia
             boton1.setOnClickListener {
+
+                var id = absoluteAdapterPosition+1
+                triviaEdit=triviaList[absoluteAdapterPosition]
+                triviaEdit.userAnswer=1
                 answerValidate(1, resCorrecta)
+                mTriviaViewModel.updateItem(triviaEdit)
+
             }
             boton2.setOnClickListener {
+                var id = absoluteAdapterPosition+1
+                triviaEdit=triviaList[absoluteAdapterPosition]
+                triviaEdit.userAnswer=2
                 answerValidate(2, resCorrecta)
+                mTriviaViewModel.updateItem(triviaEdit)
+
             }
             boton3.setOnClickListener {
+                var id = absoluteAdapterPosition+1
+                triviaEdit=triviaList[absoluteAdapterPosition]
+                triviaEdit.userAnswer=3
                 answerValidate(3, resCorrecta)
+                mTriviaViewModel.updateItem(triviaEdit)
+
+
             }
         }
     }
@@ -97,11 +132,11 @@ class viewpagerAdapter(
     }
 
     override fun onBindViewHolder(holder: Pager2ViewHolder, position: Int) {
-        holder.bind(listaSE[position])
+        holder.bind(triviaList[position])
     }
 
     override fun getItemCount(): Int {
-        return listaSE.size
+        return triviaList.size
     }
 
 }
