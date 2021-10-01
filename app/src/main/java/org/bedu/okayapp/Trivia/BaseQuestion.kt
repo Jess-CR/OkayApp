@@ -19,10 +19,10 @@ class BaseQuestion : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-      val adapter =  TriviaAdapter()
-        /* val recycler = binding.recyclerView
+        val adapter =  TriviaAdapter()
+        val recycler = binding.recyclerView
         recycler.adapter =adapter
-        recycler.layoutManager = LinearLayoutManager(this)*/
+        recycler.layoutManager = LinearLayoutManager(this)
 
 
         mTriviaViewModel = ViewModelProvider(this).get(TriviaViewModel::class.java)
