@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OkayApp">
         <activity
+            android:name=".Temas.UserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Categoria.UserActivity"
+            android:exported="true" />
+        <activity
             android:name=".ValidaEmail"
             android:exported="true" />
         <activity

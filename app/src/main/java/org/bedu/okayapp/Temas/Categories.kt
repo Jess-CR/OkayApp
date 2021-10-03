@@ -29,17 +29,10 @@ class categories : AppCompatActivity() {
         auth=FirebaseAuth.getInstance()
         setContentView(binding.root)
         val arrayAdapter: ArrayAdapter<*>
-        val servicio1 = resources.getStringArray(R.array.Categorias)
-        listaCategorias = findViewById(R.id.listaCategorias)
+       // val servicio1 = resources.getStringArray(R.array.Categorias)
 
-        arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, servicio1)
-        listaCategorias.adapter = arrayAdapter
-
-        listaCategorias.onItemClickListener =
-            AdapterView.OnItemClickListener { parent, view, position, id ->
-                val intent = Intent(this, Topic::class.java)
-                startActivity(intent)
-            }
+        //arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, servicio1)
+       // listaCategorias.adapter = arrayAdapter
 
         val progressBar = ProgressBarAnimation(binding.CategoriesProgressBar,binding.progressPercentage,binding.progressPercentage)
 
@@ -47,6 +40,41 @@ class categories : AppCompatActivity() {
 
         binding.categoriasButtonSalir.setOnClickListener {
             signOut()
+        }
+
+        val imageId = intArrayOf(
+            R.drawable.sexual_education, R.drawable.sexual_education, R.drawable.sexual_education, R.drawable.sexual_education, R.drawable.sexual_education,
+            R.drawable.sexual_education
+        )
+        val name = arrayOf(
+            "Salud sexual y reproductiva",
+            "Finanzas",
+            "Vida laboral",
+            "Medio ambiente",
+            "Salud",
+            "Relaciones humanas"
+        )
+        val phoneNo = arrayOf(
+            "7656610000", "9999043232", "7834354323", "9876543211", "5434432343",
+            "9439043232"
+        )
+
+        val userArrayList: ArrayList<Categorias> = ArrayList()
+        for (i in imageId.indices) {
+            val user = Categorias(
+                name[i],imageId[i]
+            )
+            userArrayList.add(user)
+        }
+        val listAdapter = ListAdapter(this, userArrayList)
+        binding.listview.setAdapter(listAdapter)
+        binding.listview.setClickable(true)
+        binding.listview.setOnItemClickListener { parent, view, position, id ->
+            val i = Intent(this, UserActivity::class.java)
+            i.putExtra("name", name[position])
+            i.putExtra("seccion", phoneNo[position])
+            i.putExtra("imageid", imageId[position])
+            startActivity(i)
         }
     }
 

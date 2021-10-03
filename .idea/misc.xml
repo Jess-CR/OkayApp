@@ -59,7 +59,7 @@
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_base_question.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_categories.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_categories.xml" value="0.2" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_correcto.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_forgot_pasword.xml" value="0.25" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.22447916666666667" />
@@ -69,9 +69,12 @@
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_progress.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_resultado.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_user.xml" value="0.1515625" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/activity_valida_email.xml" value="0.14739583333333334" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/dropdown_item.xml" value="0.22" />
         <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/dropdown_profession.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/list_item.xml" value="0.165625" />
+        <entry key="..\:/Users/kenli/Documents/OkayApp/app/src/main/res/layout/listitem.xml" value="0.165625" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.17037037037037037" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.17037037037037037" />
