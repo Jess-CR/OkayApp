@@ -34,6 +34,7 @@
 
     <EditText
         android:id="@+id/log_in_editText_email"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:layout_width="340dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -63,37 +64,21 @@
         app:layout_constraintStart_toStartOf="@+id/log_in_txt_email"
         app:layout_constraintTop_toBottomOf="@+id/log_in_editText_email" />
 
-    <EditText
-        android:id="@+id/log_in_editText_password"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:hint="@string/log_in_password_ph"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textColor="@color/grey_placeholders"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/log_in_editText_email"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/log_in_editText_email"
-        app:layout_constraintTop_toBottomOf="@+id/log_in_txt_password" />
 
     <TextView
         android:id="@+id/log_in_txt_forgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="28dp"
+        android:onClick="forgotPassword"
         android:text="@string/log_in_forgotpassword"
         android:textColor="@color/yolo_blue"
         android:textSize="11dp"
         android:textStyle="bold"
-        android:onClick="forgotPassword"
-        app:layout_constraintEnd_toEndOf="@+id/log_in_editText_password"
-        app:layout_constraintStart_toStartOf="@+id/log_in_editText_password"
-        app:layout_constraintTop_toBottomOf="@+id/log_in_editText_password" />
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <CheckBox
         android:id="@+id/log_in_chkBox_remember"
@@ -115,14 +100,36 @@
         android:backgroundTint="@color/blue_botton"
         android:hint="@string/log_in_button"
         android:text="@string/log_in_button"
-        android:onClick="loging"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/log_in_chkBox_remember"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/log_in_chkBox_remember"
         app:layout_constraintTop_toBottomOf="@+id/log_in_chkBox_remember"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.562" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        app:endIconMode="password_toggle"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/log_in_editText_email"
+        app:layout_constraintStart_toStartOf="@+id/log_in_editText_email"
+        app:layout_constraintTop_toBottomOf="@+id/log_in_txt_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/log_in_editText_password"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:textColor="@color/grey_placeholders"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:hint="@string/log_in_password_ph" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

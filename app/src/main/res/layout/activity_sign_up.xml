@@ -31,6 +31,7 @@
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="@string/sign_up_user_name_ph"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
         android:inputType="textPersonName"
         android:paddingStart="20dp"
         android:textColor="@color/grey_placeholders"
@@ -41,6 +42,7 @@
         tools:ignore="RtlSymmetry" />
 
     <EditText
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:id="@+id/sign_up_editText_email"
         android:layout_width="340dp"
         android:layout_height="48dp"
@@ -58,44 +60,53 @@
         app:layout_constraintStart_toStartOf="@+id/sign_up_editText_username"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_username"
         tools:ignore="RtlSymmetry" />
-
-    <EditText
-        android:id="@+id/sign_up_editText_password"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="340dp"
-        android:layout_height="48dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:hint="@string/sign_up_password_ph"
+        app:endIconMode="password_toggle"
         android:inputType="textPassword"
-        android:paddingStart="20dp"
-        android:textColor="@color/grey_placeholders"
-        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_editText_email"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/sign_up_editText_email"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_email"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry">
 
-    <EditText
-        android:id="@+id/sign_up_editText_passwordConfirmation"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sign_up_editText_password"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:hint="@string/log_in_password_ph"
+            android:textColor="@color/grey_placeholders" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout1"
         android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:hint="@string/sign_up_password_confirmation_ph"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:inputType="textPassword"
-        android:paddingStart="20dp"
-        android:textColor="@color/grey_placeholders"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/sign_up_editText_password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_editText_password"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_password"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        tools:ignore="RtlSymmetry">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sign_up_editText_passwordConfirmation"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/white"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:hint="confirmar contraseña"
+            android:textColor="@color/grey_placeholders" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_up_btn_continue"
@@ -106,21 +117,21 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:cornerRadius="8dp"
-        android:onClick="register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_RadioGroup"
         app:layout_constraintStart_toStartOf="@+id/sign_up_RadioGroup"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_RadioGroup"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <EditText
         android:id="@+id/sign_up_editText_date"
         android:layout_width="340dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
         android:clickable="false"
+        android:drawableLeft="@drawable/ic_baseline_date_range_24"
         android:ems="10"
         android:focusable="false"
         android:hint="Fecha de nacimiento"
@@ -128,10 +139,10 @@
         android:paddingStart="20dp"
         android:textColor="@color/grey_placeholders"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/sign_up_editText_passwordConfirmation"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_editText_passwordConfirmation"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_passwordConfirmation"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
         tools:ignore="RtlSymmetry" />
 
     <RadioGroup

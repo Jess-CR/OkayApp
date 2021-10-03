@@ -8,31 +8,34 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import org.bedu.okayapp.Inicio.LogIn
+import org.bedu.okayapp.databinding.ActivityForgotPaswordBinding
+import org.bedu.okayapp.databinding.ActivityLogInBinding
 
 class forgotPasword : AppCompatActivity() {
-    private lateinit var log_in_editText_email: EditText
-    private lateinit var auth:FirebaseAuth
+   /* private lateinit var log_in_editText_email: EditText
+    private lateinit var auth:FirebaseAuth*/
+   private lateinit var auth: FirebaseAuth
+    private lateinit var binding: ActivityForgotPaswordBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_forgot_pasword)
-        log_in_editText_email = findViewById(R.id.log_in_editText_email)
-        auth=FirebaseAuth.getInstance()
-    }
-    fun send(view:View){
-        val email=log_in_editText_email.text.toString()
-        if(!TextUtils.isEmpty(email)){
-            auth.sendPasswordResetEmail(email)
-                .addOnCompleteListener(this){
-                    task ->
-                    if(task.isSuccessful){
-                        startActivity(Intent(this,LogIn::class.java))
-                    }else{
-                        Toast.makeText(this,"Error al enviar correo", Toast.LENGTH_LONG).show()
-                    }
+        binding = ActivityForgotPaswordBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        auth= FirebaseAuth.getInstance()
+        binding.logInBtnLogIn.setOnClickListener {
+            val email = binding.logInEditTextEmail.text.toString()
+            Firebase.auth.sendPasswordResetEmail(email).addOnCompleteListener{
+                task ->
+                if(task.isSuccessful){
+                    val intent = Intent(this,LogIn::class.java)
+                    startActivity(intent)
+                }else{
+                    Toast.makeText(this,"Ingrese un email valido", Toast.LENGTH_LONG).show()
                 }
-        }else{
-            Toast.makeText(this,"Llena el campo",Toast.LENGTH_LONG).show()
+            }
         }
     }
 }

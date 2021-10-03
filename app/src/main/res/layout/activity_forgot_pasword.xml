@@ -12,29 +12,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
+        android:textColor="@color/purple"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:text="Recuperar contraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Ingresa correo registrado para enviar un correo con los pasos para cambiar tu contraseña."
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
     <EditText
         android:id="@+id/log_in_editText_email"
         android:layout_width="340dp"
         android:layout_height="48dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:ems="10"
         android:hint="@string/log_in_email_ph"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
         android:textColor="@color/grey_placeholders"
         android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/log_in_btn_logIn"
@@ -46,7 +61,6 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:cornerRadius="8dp"
-        android:onClick="send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/log_in_editText_email"
         app:layout_constraintStart_toStartOf="@+id/log_in_editText_email" />

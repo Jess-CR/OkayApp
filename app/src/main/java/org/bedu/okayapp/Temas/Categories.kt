@@ -8,18 +8,25 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.Progreso.Progress
 import org.bedu.okayapp.R
 import org.bedu.okayapp.databinding.ActivityCategoriesBinding
+import kotlin.math.sign
 
 
 class categories : AppCompatActivity() {
 
     private lateinit var listaCategorias: ListView
     private lateinit var binding: ActivityCategoriesBinding
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityCategoriesBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
+        auth=FirebaseAuth.getInstance()
         setContentView(binding.root)
         val arrayAdapter: ArrayAdapter<*>
         val servicio1 = resources.getStringArray(R.array.Categorias)
@@ -38,10 +45,18 @@ class categories : AppCompatActivity() {
 
         progressBar.initProgressBar()
 
-
+        binding.categoriasButtonSalir.setOnClickListener {
+            signOut()
+        }
     }
 
     fun progreso(view: View) {
         startActivity(Intent(this, Progress::class.java))
+    }
+
+    private fun signOut(){
+        Firebase.auth.signOut()
+        val intent = Intent(this,LogIn::class.java)
+        startActivity(intent)
     }
 }

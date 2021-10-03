@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
+import android.util.Patterns
 import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
@@ -11,10 +13,15 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.bedu.okayapp.R
+import org.bedu.okayapp.Temas.categories
+import org.bedu.okayapp.ValidaEmail
+import org.bedu.okayapp.databinding.ActivityLogInBinding
+import org.bedu.okayapp.databinding.ActivitySignUpBinding
+import java.util.regex.Pattern
 
 class SignUp : AppCompatActivity() {
 
-    private lateinit var sign_up_txt_title: TextView
+   /* private lateinit var sign_up_txt_title: TextView
     private lateinit var sign_up_editText_username:EditText
     private lateinit var sign_up_editText_email:EditText
     private lateinit var sign_up_editText_password:EditText
@@ -26,14 +33,38 @@ class SignUp : AppCompatActivity() {
     private lateinit var sign_up_btn_continue:Button
     private lateinit var dbReference:DatabaseReference
     private lateinit var database:FirebaseDatabase
-    private lateinit var auth:FirebaseAuth
-
+    private lateinit var auth:FirebaseAuth*/
+   private lateinit var dbReference:DatabaseReference
+    private lateinit var database:FirebaseDatabase
+    private lateinit var auth: FirebaseAuth
+    private lateinit var binding: ActivitySignUpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        auth=FirebaseAuth.getInstance()
+        val passwordCarac = Pattern.compile("^"+
+        "(?=.*[-@#$%^&+=])" +
+        ".{8,}"+
+        "$")
 
-        sign_up_txt_title =findViewById(R.id.sign_up_txt_title)
+        binding.signUpBtnContinue.setOnClickListener {
+            val email= binding.signUpEditTextEmail.text.toString()
+            val password = binding.signUpEditTextPassword.text.toString()
+            val validaPasword=binding.signUpEditTextPasswordConfirmation.text.toString()
+            if(email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                Toast.makeText(baseContext,"Ingrese un email valido",Toast.LENGTH_LONG).show()
+            }else if(password.isEmpty() || !passwordCarac.matcher(password).matches()){
+                Toast.makeText(baseContext,"La contrasena es insegura",Toast.LENGTH_LONG).show()
+            }else if(password != validaPasword){
+                Toast.makeText(baseContext,"Las contraseñas no coinciden",Toast.LENGTH_LONG).show()
+            }else {
+                createNewAccount(email,password)
+            }
+        }
+        binding.signUpEditTextDate.setOnClickListener{showDatePicker()}
+     /*   sign_up_txt_title =findViewById(R.id.sign_up_txt_title)
         sign_up_editText_username=findViewById(R.id.sign_up_editText_username)
         sign_up_editText_email=findViewById(R.id.sign_up_editText_email)
         sign_up_editText_password=findViewById(R.id.sign_up_editText_password)
@@ -47,11 +78,57 @@ class SignUp : AppCompatActivity() {
 
         database= FirebaseDatabase.getInstance()
         auth= FirebaseAuth.getInstance()
-        dbReference=database.reference.child("User")
+        dbReference=database.reference.child("User")*/
 
     }
+    private fun createNewAccount(email:String,password:String){
+        val name = binding.signUpEditTextUsername.text.toString()
+        val fecha = binding.signUpEditTextDate.text.toString()
+        val profesion = binding.signUpRadioGroup.checkedRadioButtonId.toString()
+        if (!TextUtils.isEmpty(name) &&!TextUtils.isEmpty(fecha) && !TextUtils.isEmpty(profesion)) {
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val intent=Intent(this,ValidaEmail::class.java)
+                        startActivity(intent)
+                    } else {
+                        Log.w("TAG", "signInWithEmail:failure", task.exception)
+                        Toast.makeText(baseContext, "Authentication failed", Toast.LENGTH_LONG)
+                            .show()
+                    }
+                }
+        }else{
+            Toast.makeText(baseContext, "Llena todos los campos", Toast.LENGTH_LONG)
+                .show()
+        }
+    }
+    private fun showDatePicker() {
+        val datePicker = DatePickerFragment {day, month, year -> onDateSelected(day, month, year)}
+        datePicker.show(supportFragmentManager,"datePicker")
+    }
 
-    fun register(view:View){
+    fun onDateSelected(day:Int, month:Int, year:Int){
+        binding.signUpEditTextDate.setText("$day / $month / $year")
+    }
+    public override fun onStart(){
+        super.onStart()
+        val currentUser =auth.currentUser
+        if(currentUser != null){
+            if(currentUser.isEmailVerified){
+                reload()
+            }else{
+                val intent= Intent(this,ValidaEmail::class.java)
+                startActivity(intent)
+            }
+
+        }
+    }
+
+    private fun reload(){
+        val intent= Intent(this, categories::class.java)
+        this.startActivity(intent)
+    }
+   /* fun register(view:View){
         createNewAccount()
     }
     private fun createNewAccount(){
@@ -144,6 +221,6 @@ class SignUp : AppCompatActivity() {
     fun onDateSelected(day:Int, month:Int, year:Int){
         sign_up_editText_date.setText("$day / $month / $year")
     }
-
+*/
 
 }
