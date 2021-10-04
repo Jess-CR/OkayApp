@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.bedu.okayapp">
 
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OkayApp">
+        <activity
+            android:name=".Trivia.Seleccion"
+            android:exported="true" />
+        <activity
+            android:name=".Temas.UserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Categoria.UserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ValidaEmail"
+            android:exported="true" />
+        <activity
+            android:name=".forgotPasword"
+            android:exported="true" />
         <activity
             android:name=".Inicio.Profile"
             android:exported="true" />
