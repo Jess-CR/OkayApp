@@ -10,30 +10,31 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         android:text="SALUD SEXUAL Y REPRODUCTIVA"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/yolo_orange"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055" />
 
     <ProgressBar
         android:id="@+id/progressPogressBar"
         android:layout_width="140dp"
         android:layout_height="140dp"
+        android:layout_marginTop="36dp"
         android:background="@color/yolo_orange"
         android:indeterminateOnly="false"
         android:max="100"
-        android:progress="0"
+        android:progress="12"
         android:progressDrawable="@drawable/circle_progress"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:layout_width="80dp"
@@ -41,128 +42,116 @@
         app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar"
         app:layout_constraintEnd_toEndOf="@+id/progressPogressBar"
         app:layout_constraintStart_toStartOf="@+id/progressPogressBar"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar"
-        android:src="@drawable/sex_education"/>
+        app:layout_constraintTop_toTopOf="@+id/progressPogressBar" />
+<!--        android:src="@drawable/ic_baseline_local_hospital_24"-->
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="400dp"
+        android:layout_marginBottom="340dp"
         android:text="Metodos anticonceptivos"
-        android:textColor="@color/yolo_orange"
         android:textSize="12dp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressPogressBar"
+        app:layout_constraintVertical_bias="0.133" />
 
     <ProgressBar
         android:id="@+id/progressPogressBar2"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
         android:background="@color/yolo_purple"
         android:indeterminateOnly="false"
         android:max="100"
-        android:progress="0"
+        android:progress="50"
         android:progressDrawable="@drawable/circle_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/progressPogressBar3"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.082" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"
-        android:text="Biología reproductiva"
+        android:text="Biologia reproductiva"
+        android:textAlignment="center"
         android:textSize="12dp"
-        android:textStyle="bold"
-        android:textColor="@color/yolo_purple"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/progressPogressBar2"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="@+id/progressPogressBar2"
+        app:layout_constraintEnd_toStartOf="@+id/progressPogressBar3"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressPogressBar2"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Biologia reproductiva"
+        android:textAlignment="center"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toEndOf="@+id/progressPogressBar3"
+        app:layout_constraintTop_toBottomOf="@+id/progressPogressBar4"
+        app:layout_constraintVertical_bias="0.061" />
 
     <ProgressBar
         android:id="@+id/progressPogressBar3"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="48dp"
         android:background="@color/yolo_yellow"
         android:indeterminateOnly="false"
         android:max="100"
-        android:progress="0"
+        android:progress="30"
         android:progressDrawable="@drawable/circle_progress"
-        app:layout_constraintStart_toEndOf="@+id/progressPogressBar2"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar2" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Enfermedades de"
-        android:textSize="12sp"
-        android:textColor="@color/yolo_yellow"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/progressPogressBar3"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/progressPogressBar3"
-        app:layout_constraintTop_toBottomOf="@+id/progressPogressBar3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.356" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:text="transmisión sexual"
-        android:textSize="12sp"
-        android:textColor="@color/yolo_yellow"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:layout_marginTop="18dp"
+        android:text="enfermedades de trasmision sexual"
+        android:textAlignment="center"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/progressPogressBar4"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/progressPogressBar2"
+        app:layout_constraintTop_toBottomOf="@+id/progressPogressBar3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
         android:id="@+id/progressPogressBar4"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginEnd="40dp"
         android:background="@color/yolo_blue"
         android:indeterminateOnly="false"
         android:max="100"
-        android:progress="0"
+        android:progress="86"
         android:progressDrawable="@drawable/circle_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toEndOf="@+id/progressPogressBar3"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar3" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="45dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar3"
-        app:layout_constraintEnd_toEndOf="@+id/progressPogressBar3"
-        app:layout_constraintStart_toStartOf="@+id/progressPogressBar3"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar3"
-        app:srcCompat="@drawable/std" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="50dp"
-        android:layout_height="55dp"
-        app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar2"
-        app:layout_constraintEnd_toEndOf="@+id/progressPogressBar2"
-        app:layout_constraintStart_toStartOf="@+id/progressPogressBar2"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar2"
-        app:srcCompat="@drawable/biology" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.158" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,19 +42,39 @@
         <entry key="..\:/Users/Dell/Downloads/OkayApp-b1ec05abe074b24e8f713912f5537ea8c9db4dd4/OkayApp-b1ec05abe074b24e8f713912f5537ea8c9db4dd4/app/src/main/res/layout/activity_user.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/Dell/Downloads/OkayApp-b1ec05abe074b24e8f713912f5537ea8c9db4dd4/OkayApp-b1ec05abe074b24e8f713912f5537ea8c9db4dd4/app/src/main/res/layout/activity_valida_email.xml" value="0.1" />
         <entry key="..\:/Users/Dell/Downloads/OkayApp-b1ec05abe074b24e8f713912f5537ea8c9db4dd4/OkayApp-b1ec05abe074b24e8f713912f5537ea8c9db4dd4/app/src/main/res/layout/list_item.xml" value="0.19814814814814816" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/button_borderblue.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/circle_progress.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/ic_yolo_intro.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/drawable/roundstyle.xml" value="0.2203125" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_base_question.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_categories.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_correcto.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_estudio.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_forgot_pasword.xml" value="0.16" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_incorrecto.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_menu.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_progress.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_resultado.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_seleccion.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_topic.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_topic.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_user.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/activity_valida_email.xml" value="0.18" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/card_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/dropdown_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/dropdown_profession.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/fragment_question.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/fragment_question.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/Dell/OneDrive/Documentos/GitHub/OkayApp/app/src/main/res/layout/list_item.xml" value="0.16" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/drawable/button_borderblue.xml" value="0.1" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/drawable/roundstyle.xml" value="0.2703125" />
         <entry key="..\:/Users/jessi/AndroidStudioProjects/OkayApp/app/src/main/res/layout/activity_log_in.xml" value="0.2" />

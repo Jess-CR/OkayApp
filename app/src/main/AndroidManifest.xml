@@ -15,31 +15,68 @@
         android:theme="@style/Theme.OkayApp">
         <activity
             android:name=".Trivia.Seleccion"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Progreso.Progress">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Progreso.Progress" />
+            </activity>
         <activity
             android:name=".Temas.UserActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Categoria.UserActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Temas.categories">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Temas.categories" />
+        </activity>
         <activity
             android:name=".ValidaEmail"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Inicio.Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio.Menu" />
+        </activity>
         <activity
             android:name=".forgotPasword"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Inicio.LogIn">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio.LogIn" />
+        </activity>
         <activity
             android:name=".Inicio.Profile"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Progreso.Progress">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Progreso.Progress" />
+        </activity>
         <activity
             android:name=".Progreso.Progress"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Temas.categories">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Temas.categories" />
+        </activity>
         <activity
             android:name=".Inicio.LogIn"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Inicio.Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio.Menu" />
+        </activity>
         <activity
             android:name=".Inicio.SignUp"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Inicio.Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio.Menu" />
+        </activity>
         <activity
             android:name=".Inicio.Menu"
             android:exported="true" />
@@ -48,10 +85,21 @@
             android:exported="true" />
         <activity
             android:name=".Temas.Topic"
-            android:exported="true" /> <!-- ketzalli -->
+            android:exported="true"
+            android:parentActivityName=".Temas.categories">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Temas.categories" />
+        </activity>
+        <!-- ketzalli -->
         <activity
             android:name=".Trivia.BaseQuestion"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".Trivia.Seleccion">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Trivia.Seleccion" />
+        </activity>
         <activity
             android:name=".Trivia.Correcto"
             android:exported="true" />
@@ -59,8 +107,17 @@
             android:name=".Trivia.Resultado"
             android:exported="true" />
         <activity
+            android:name=".Trivia.Estudio"
+            android:exported="true"
+            android:parentActivityName=".Trivia.Seleccion">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Trivia.Seleccion" />
+        </activity>
+        <activity
             android:name=".Trivia.Incorrecto"
-            android:exported="true" /> <!-- hasta aqui -->
+            android:exported="true" />
+        <!-- hasta aqui -->
         <activity
             android:name=".Inicio.MainActivity"
             android:exported="true">
