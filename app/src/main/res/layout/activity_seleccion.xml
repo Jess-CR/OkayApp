@@ -10,13 +10,14 @@
         android:id="@+id/paraEstudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
         android:text="Estudio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.511" />
 
     <Button
         android:id="@+id/paraTest"
@@ -27,6 +28,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintTop_toBottomOf="@+id/paraEstudio"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITULO"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="374dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="24dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt finibus iaculis. Fusce porta efficitur pretium. Nullam turpis sapien, auctor sit amet nunc vel, feugiat cursus tortor. Maecenas commodo in tortor id vestibulum. Mauris ut felis sed erat iaculis elementum. Praesent sed ante vitae augue malesuada vulputate. Aliquam id nisi massa. Proin fringilla diam at scelerisque malesuada. Mauris quis porttitor eros. "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.036" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,11 +29,11 @@
         android:textColor="@color/black"
         android:textSize="26sp" />
 
-    <ListView
+    <!--<ListView
         android:id="@+id/listviewSeccion"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="296dp"
         android:layout_below="@+id/name_profile"
         android:layout_marginTop="10dp"
-        tools:listitem="@layout/list_item" />
+        tools:listitem="@layout/list_item" />-->
 </RelativeLayout>

@@ -22,7 +22,7 @@ class Estudio : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_estudio)
 
         val reproducir = findViewById<Button>(R.id.reproducir)
 
