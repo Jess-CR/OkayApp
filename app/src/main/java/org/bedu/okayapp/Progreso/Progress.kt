@@ -11,6 +11,7 @@ import android.widget.Button
 import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.Inicio.Profile
 import org.bedu.okayapp.R
+import org.bedu.okayapp.Trivia.Seleccion
 import org.bedu.okayapp.databinding.ActivityProgressBinding
 
 class Progress : AppCompatActivity() {
@@ -47,7 +48,7 @@ class Progress : AppCompatActivity() {
 
         //ketzalli -> solo le agregue la acción al boton
         binding.progressBtnPlay.setOnClickListener {
-            val intent = Intent(this, BaseQuestion::class.java)
+            val intent = Intent(this, Seleccion::class.java)
             startActivity(intent)
         }
         //hasta aqui
