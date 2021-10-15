@@ -19,16 +19,16 @@ import room.TriviaViewModel
 var correctas: Int = 0
 var intentos: Int = 0
 //private var listaSE: ArrayList<SexualEducationDC>
-class viewpagerAdapter(
+class TriviaAdapter(
     private var contexto: Context
-) : RecyclerView.Adapter<viewpagerAdapter.Pager2ViewHolder>() {
+) : RecyclerView.Adapter<TriviaAdapter.ViewHolder>() {
     private var triviaList = emptyList<Trivia>()
     fun setData(trivia: List<Trivia>) {
         this.triviaList = trivia
         notifyDataSetChanged()
     }
 
-    inner class Pager2ViewHolder(var itemView: View, var contexto: Context):RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(var view: View, var contexto: Context):RecyclerView.ViewHolder(view){
         //declarar variables
         val pregunta: TextView
         val imagen: ImageView
@@ -50,7 +50,6 @@ class viewpagerAdapter(
 
 
         fun bind(trivia: Trivia) {
-            //asignar los valores a su respectivo componente
             //asignar los valores a su respectivo componente
             pregunta.text = trivia.triviaQuestion
             Picasso.get().load(trivia.image).into(imagen)
@@ -86,20 +85,15 @@ class viewpagerAdapter(
                 boton1.isEnabled = false
                 boton2.isEnabled = false
                 boton3.isEnabled = false
-
-
-
             }
             //acciones al clickear en los botones de opciones
             lateinit var triviaEdit:Trivia
             boton1.setOnClickListener {
-
                 var id = absoluteAdapterPosition+1
                 triviaEdit=triviaList[absoluteAdapterPosition]
                 triviaEdit.userAnswer=1
                 answerValidate(1, resCorrecta)
                 mTriviaViewModel.updateItem(triviaEdit)
-
             }
             boton2.setOnClickListener {
                 var id = absoluteAdapterPosition+1
@@ -107,7 +101,6 @@ class viewpagerAdapter(
                 triviaEdit.userAnswer=2
                 answerValidate(2, resCorrecta)
                 mTriviaViewModel.updateItem(triviaEdit)
-
             }
             boton3.setOnClickListener {
                 var id = absoluteAdapterPosition+1
@@ -115,8 +108,6 @@ class viewpagerAdapter(
                 triviaEdit.userAnswer=3
                 answerValidate(3, resCorrecta)
                 mTriviaViewModel.updateItem(triviaEdit)
-
-
             }
         }
     }
@@ -124,14 +115,14 @@ class viewpagerAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): Pager2ViewHolder {
-        return Pager2ViewHolder(
+    ): ViewHolder {
+        return ViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.card_layout,parent,false),
             contexto
         )
     }
 
-    override fun onBindViewHolder(holder: Pager2ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(triviaList[position])
     }
 

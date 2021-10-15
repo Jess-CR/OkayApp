@@ -14,14 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OkayApp">
         <activity
-            android:name=".Trivia.Seleccion"
-            android:exported="true"
-            android:parentActivityName=".Progreso.Progress">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Progreso.Progress" />
-            </activity>
-        <activity
             android:name=".Temas.UserActivity"
             android:exported="true"
             android:parentActivityName=".Temas.categories">
@@ -92,6 +84,14 @@
                 android:value=".Temas.categories" />
         </activity>
         <!-- ketzalli -->
+        <activity
+            android:name=".Trivia.Seleccion"
+            android:exported="true"
+            android:parentActivityName=".Progreso.Progress">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Progreso.Progress" />
+            </activity>
         <activity
             android:name=".Trivia.BaseQuestion"
             android:exported="true"

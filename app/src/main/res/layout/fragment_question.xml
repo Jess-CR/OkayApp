@@ -6,38 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Trivia.QuestionFragment">
 
-    <!--<me.relex.circleindicator.CircleIndicator
-        android:id="@+id/indicator"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:background="#1E88E5"/>-->
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager2"
-        android:layout_width="match_parent"
-        android:layout_height="560dp"
-        android:layout_centerInParent="true">
-
-    </androidx.viewpager2.widget.ViewPager2>
-
-    <Button
-        android:id="@+id/siguiente"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="182dp"
-        android:layout_height="62dp"
-        android:layout_below="@+id/view_pager2"
-        android:layout_alignRight="@+id/view_pager2"
-        android:layout_marginLeft="13dp"
-        android:layout_marginRight="13dp"
-        android:backgroundTint="#50BCCB"
-        android:text="Siguiente"
-        app:cornerRadius="10dp"
-        app:icon="@drawable/arrow_next2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!--        android:layout_above="@+id/indicator"/>-->
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

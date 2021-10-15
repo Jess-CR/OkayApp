@@ -1,5 +1,7 @@
 package org.bedu.okayapp.Trivia
-
+//ketzalli
+//permite escoger si ir al test o si ir a la zona de estudio (youtube)
+//se debe cambiar para mostrar el contenido en base al tema escogido
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
