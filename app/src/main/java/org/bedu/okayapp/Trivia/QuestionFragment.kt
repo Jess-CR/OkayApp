@@ -9,6 +9,8 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import org.bedu.okayapp.R
 import room.TriviaViewModel
@@ -25,10 +27,6 @@ private const val ARG_PARAM2 = "param2"
  */
 class QuestionFragment : Fragment() {
     // TODO: Rename and change types of parameters
-
-
-
-
     private var param1: String? = null
     private var param2: String? = null
 
@@ -46,33 +44,15 @@ class QuestionFragment : Fragment() {
     ): View? {
         //aqui se mete el codigo
         val view: View = inflater.inflate(R.layout.fragment_question, container, false)
-        val view_pager2 = view.findViewById<ViewPager2>(R.id.view_pager2)
-        val siguiente = view.findViewById<Button>(R.id.siguiente)
-
-        val adapter =  viewpagerAdapter(this.requireContext())
+        val adapter =  TriviaAdapter(this.requireContext())
+        val recycler = view.findViewById<RecyclerView>(R.id.recyclerView)
+        recycler.adapter = adapter
+        recycler.layoutManager = LinearLayoutManager(this.requireContext())
 
         mTriviaViewModel = ViewModelProvider(this).get(TriviaViewModel::class.java)
         mTriviaViewModel.readAllData.observe(viewLifecycleOwner, Observer { trivia->
             adapter.setData(trivia)
-
         })
-        view_pager2.adapter = adapter
-
-
-
-
-        view_pager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-//        val indicator=findViewById<CircleIndicator3>(R.id.indicator)
-//        indicator.setViewPager(view_pager2)
-
-        siguiente.setOnClickListener {
-
-            view_pager2.apply {
-                beginFakeDrag()
-                fakeDragBy(-10f)
-                endFakeDrag()
-            }
-        }
         //arriba codigoooo
         // Inflate the layout for this fragment
         return view

@@ -1,5 +1,6 @@
 package org.bedu.okayapp.Trivia
-
+//ketzalli
+//verifica que exista conexion de internet
 import android.annotation.TargetApi
 import android.content.BroadcastReceiver
 import android.content.Context

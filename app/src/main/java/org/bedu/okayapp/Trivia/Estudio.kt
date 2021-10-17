@@ -1,5 +1,6 @@
 package org.bedu.okayapp.Trivia
-
+//ketzalli
+//muestra el video de youtube *se debe corregir
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

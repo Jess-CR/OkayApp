@@ -1,5 +1,6 @@
 package org.bedu.okayapp.Trivia
 //ketzalli
+//contiene el fragment de las preguntas
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
