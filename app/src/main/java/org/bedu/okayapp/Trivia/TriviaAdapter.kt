@@ -23,8 +23,13 @@ class TriviaAdapter(
     private var contexto: Context
 ) : RecyclerView.Adapter<TriviaAdapter.ViewHolder>() {
     private var triviaList = emptyList<Trivia>()
+
     fun setData(trivia: List<Trivia>) {
+        //filtrar aqui: si en la tabla questions, el id es = a la seleccion del usuario
+        //entonces se cargaran esas preguntas, una vez que se implemente la base de datos completa
+        //se debe pasar como parametro la seleccion que hizo el usuario en subcategorias
         this.triviaList = trivia
+        //this.triviaList = trivia.filter { trivia -> trivia.id==2 }        //este es el filtro, solo implementar cuando la bd este lista (el 2 se cambia por la opcion del usuario)
         notifyDataSetChanged()
     }
 
