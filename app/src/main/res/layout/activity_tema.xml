@@ -20,7 +20,7 @@ android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#50BCCB"
+        android:background="@color/yolo_blue"
         android:padding="16dp">
 
         <ProgressBar
@@ -41,9 +41,9 @@ android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imageTheme"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/happy_emoji"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/sex_education"
             app:layout_constraintBottom_toBottomOf="@+id/progressTheme"
             app:layout_constraintEnd_toEndOf="@+id/progressTheme"
             app:layout_constraintStart_toStartOf="@+id/progressTheme"
@@ -56,8 +56,9 @@ android:layout_height="wrap_content">
             android:layout_height="wrap_content"
             android:text="Titulo"
             android:textAlignment="textStart"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.532"
