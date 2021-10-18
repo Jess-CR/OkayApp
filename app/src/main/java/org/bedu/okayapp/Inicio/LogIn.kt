@@ -15,7 +15,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import org.bedu.okayapp.R
-import org.bedu.okayapp.Temas.categories
+import org.bedu.okayapp.Temas.ShowTemas
 import org.bedu.okayapp.ValidaEmail
 import org.bedu.okayapp.databinding.ActivityLogInBinding
 import org.bedu.okayapp.databinding.ActivityMainBinding
@@ -64,7 +64,7 @@ class LogIn : AppCompatActivity() {
         }
     }
     private fun reload(){
-        val intent=Intent(this,categories::class.java)
+        val intent=Intent(this,ShowTemas::class.java)
         this.startActivity(intent)
     }
 

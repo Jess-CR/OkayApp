@@ -6,7 +6,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import org.bedu.okayapp.R
-import org.bedu.okayapp.Temas.categories
 import org.bedu.okayapp.databinding.ActivityIncorrectoBinding
 import org.bedu.okayapp.databinding.ActivitySeleccionBinding
 

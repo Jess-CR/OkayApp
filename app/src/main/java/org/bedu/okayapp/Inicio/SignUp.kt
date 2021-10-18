@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.bedu.okayapp.R
-import org.bedu.okayapp.Temas.categories
+import org.bedu.okayapp.Temas.ShowTemas
 import org.bedu.okayapp.ValidaEmail
 import org.bedu.okayapp.databinding.ActivityLogInBinding
 import org.bedu.okayapp.databinding.ActivitySignUpBinding
@@ -125,7 +125,7 @@ class SignUp : AppCompatActivity() {
     }
 
     private fun reload(){
-        val intent= Intent(this, categories::class.java)
+        val intent= Intent(this, ShowTemas::class.java)
         this.startActivity(intent)
     }
    /* fun register(view:View){

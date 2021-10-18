@@ -4,41 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.bedu.okayapp.Temas.categories">
-
+    tools:context=".Temas.ShowTemas">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/elegirCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="Elige una categoría..."
         android:textColor="@color/yolo_blue"
         android:textSize="24dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
 
-
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="411dp"
-        android:layout_height="580dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/CategoriesProgressBar"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/elegirCat"
+        app:layout_constraintVertical_bias="0.252" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/progreso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="80dp"
+<<<<<<< HEAD:app/src/main/res/layout/activity_showtemas.xml
+        android:onClick="progreso"
+        android:text="Sigue aprendiendo, Nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+=======
         android:layout_marginStart="48dp"
         android:onClick="progreso"
         android:text="Sigue aprendiendo, Nombre"
@@ -47,18 +52,19 @@
         android:textStyle="bold"
 
         app:layout_constraintBottom_toBottomOf="@+id/CategoriesProgressBar"
+>>>>>>> fadee262d08b62e9e397cb21414c908fa76c9768:app/src/main/res/layout/activity_categories.xml
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/CategoriesProgressBar"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.465" />
 
     <TextView
         android:id="@+id/progressPercentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
+        android:onClick="progreso"
         android:text="100%"
         android:textColor="#663399"
-        android:onClick="progreso"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/CategoriesProgressBar"
         app:layout_constraintEnd_toEndOf="@+id/CategoriesProgressBar"
         app:layout_constraintStart_toStartOf="@+id/CategoriesProgressBar"
@@ -68,28 +74,35 @@
     <ProgressBar
         android:id="@+id/CategoriesProgressBar"
         style="?android:attr/progressBarStyle"
+<<<<<<< HEAD:app/src/main/res/layout/activity_showtemas.xml
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+=======
         android:layout_width="60dp"
         android:layout_height="60dp"
+>>>>>>> fadee262d08b62e9e397cb21414c908fa76c9768:app/src/main/res/layout/activity_categories.xml
         android:indeterminateOnly="false"
         android:max="100"
         android:progress="0"
         android:progressDrawable="@drawable/circle_progress"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toEndOf="@+id/textView3" />
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toEndOf="@+id/progreso"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
     <Button
         android:id="@+id/categorias_button_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="salir"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/elegirCat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

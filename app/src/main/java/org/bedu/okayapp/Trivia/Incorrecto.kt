@@ -6,7 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import org.bedu.okayapp.Temas.categories
+import org.bedu.okayapp.Temas.ShowTemas
 import org.bedu.okayapp.databinding.ActivityIncorrectoBinding
 
 class Incorrecto : AppCompatActivity() {
@@ -17,7 +17,7 @@ class Incorrecto : AppCompatActivity() {
         setContentView(view)
 
         Handler().postDelayed({
-            val intent = Intent(this, categories::class.java)
+            val intent = Intent(this, ShowTemas::class.java)
             startActivity(intent)
             finish()
         }, 3000)
