@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.bedu.okayapp.R
 
-class SubTemas (private var listaST:ArrayList<SubTemasDC>): RecyclerView.Adapter<SubTemas.ViewHolder>() {
+class SubTemas (private var listaST:ArrayList<SubTemasDC>,private val onSubTemaClickListener:OnSubTemaClickListener): RecyclerView.Adapter<SubTemas.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -19,6 +19,9 @@ class SubTemas (private var listaST:ArrayList<SubTemasDC>): RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(listaST[position])
+        holder.itemView.setOnClickListener{
+            onSubTemaClickListener.onSubTemaItemClicked(position)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -41,7 +44,6 @@ class SubTemas (private var listaST:ArrayList<SubTemasDC>): RecyclerView.Adapter
             titleSTheme.text = SubTemasDC.title
             imageSTheme.setImageResource(SubTemasDC.imageId)
             progressSTheme.progress = SubTemasDC.percentage
-
         }
     }
 }

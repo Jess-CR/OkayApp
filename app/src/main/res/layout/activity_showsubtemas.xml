@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,48 +13,55 @@
         android:layout_height="wrap_content"
         android:text="SALUD SEXUAL Y REPRODUCTIVA"
         android:textSize="20dp"
+        android:layout_marginTop="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055" />
+        android:layout_centerHorizontal="true"/>
 
-    <ProgressBar
-        android:id="@+id/progressPogressBar"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="36dp"
-        android:background="@color/yolo_orange"
-        android:indeterminateOnly="false"
-        android:max="100"
-        android:progress="12"
-        android:progressDrawable="@drawable/circle_progress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/yolo_purple">
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar"
-        app:layout_constraintEnd_toEndOf="@+id/progressPogressBar"
-        app:layout_constraintStart_toStartOf="@+id/progressPogressBar"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressPogressBar"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:progress="12"
+                android:progressDrawable="@drawable/circle_progress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/temas_1"
+                app:layout_constraintRight_toRightOf="@id/progressPogressBar"
+                app:layout_constraintLeft_toLeftOf="@id/progressPogressBar"
+                app:layout_constraintTop_toTopOf="@id/progressPogressBar"
+                app:layout_constraintBottom_toBottomOf="@id/progressPogressBar"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="360dp"
-        android:layout_height="290dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/materialCardView"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

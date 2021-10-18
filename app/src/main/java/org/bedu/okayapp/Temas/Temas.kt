@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.bedu.okayapp.R
 
-class Temas (private var listaT:ArrayList<TemasDC>): RecyclerView.Adapter<Temas.ViewHolder>() {
+class Temas (private var listaT:ArrayList<TemasDC>,private val onTemaClickListener:OnTemaClickListener): RecyclerView.Adapter<Temas.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -19,6 +19,9 @@ class Temas (private var listaT:ArrayList<TemasDC>): RecyclerView.Adapter<Temas.
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(listaT[position])
+        holder.itemView.setOnClickListener{
+            onTemaClickListener.onTemaItemClicked(position)
+        }
     }
 
     override fun getItemCount(): Int {
