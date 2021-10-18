@@ -37,25 +37,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="80dp"
-<<<<<<< HEAD:app/src/main/res/layout/activity_showtemas.xml
+        android:layout_marginStart="116dp"
         android:onClick="progreso"
         android:text="Sigue aprendiendo, Nombre"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-=======
-        android:layout_marginStart="48dp"
-        android:onClick="progreso"
-        android:text="Sigue aprendiendo, Nombre"
-        android:textColor="@color/yolo_orange"
-        android:textSize="16dp"
-        android:textStyle="bold"
-
-        app:layout_constraintBottom_toBottomOf="@+id/CategoriesProgressBar"
->>>>>>> fadee262d08b62e9e397cb21414c908fa76c9768:app/src/main/res/layout/activity_categories.xml
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintVertical_bias="0.479" />
 
     <TextView
         android:id="@+id/progressPercentage"
@@ -72,16 +60,10 @@
         tools:ignore="OnClick" />
 
     <ProgressBar
-        android:id="@+id/CategoriesProgressBar"
-        style="?android:attr/progressBarStyle"
-<<<<<<< HEAD:app/src/main/res/layout/activity_showtemas.xml
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-=======
-        android:layout_width="60dp"
-        android:layout_height="60dp"
->>>>>>> fadee262d08b62e9e397cb21414c908fa76c9768:app/src/main/res/layout/activity_categories.xml
+        android:id="@+id/CategoriesProgressBar"
+        style="?android:attr/progressBarStyle"
         android:indeterminateOnly="false"
         android:max="100"
         android:progress="0"
@@ -96,13 +78,15 @@
         android:id="@+id/categorias_button_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
         android:text="salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/elegirCat"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

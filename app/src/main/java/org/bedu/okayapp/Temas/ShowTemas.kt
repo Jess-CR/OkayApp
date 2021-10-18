@@ -40,22 +40,22 @@ class ShowTemas : AppCompatActivity() {
     private fun generateDataT():ArrayList<TemasDC>{
         var listT=ArrayList<TemasDC>()
         listT.add(
-            TemasDC("Salud sexual y reproductiva",R.drawable.imgprueba,20)
+            TemasDC("Salud sexual y reproductiva",R.drawable.temas_1,20)
         )
         listT.add(
-            TemasDC("Finanzas",R.drawable.imgprueba,50)
+            TemasDC("Finanzas",R.drawable.temas_2,50)
         )
         listT.add(
-            TemasDC("Vida laboral",R.drawable.imgprueba,90)
+            TemasDC("Vida laboral",R.drawable.temas_3,90)
         )
         listT.add(
-            TemasDC("Medio ambiente",R.drawable.imgprueba,30)
+            TemasDC("Medio ambiente",R.drawable.temas_4,30)
         )
         listT.add(
-            TemasDC("Salud",R.drawable.imgprueba,10)
+            TemasDC("Salud",R.drawable.temas_5,10)
         )
         listT.add(
-            TemasDC("Relaciones humanas",R.drawable.imgprueba,0)
+            TemasDC("Relaciones humanas",R.drawable.temas_6,0)
         )
         return listT
     }

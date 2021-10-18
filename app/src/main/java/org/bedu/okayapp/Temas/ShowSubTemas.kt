@@ -20,13 +20,13 @@ class ShowSubTemas : AppCompatActivity() {
     private fun generateDataST():ArrayList<SubTemasDC>{
         var listST=ArrayList<SubTemasDC>()
         listST.add(
-            SubTemasDC("Biologia Reproductiva",R.drawable.imgprueba,20)
+            SubTemasDC("Biologia Reproductiva",R.drawable.temas_1,20)
         )
         listST.add(
-            SubTemasDC("Enfermedades de transmision sexual",R.drawable.imgprueba,50)
+            SubTemasDC("Enfermedades de transmision sexual",R.drawable.temas_1,50)
         )
         listST.add(
-            SubTemasDC("Subtema 3",R.drawable.imgprueba,90)
+            SubTemasDC("Subtema 3",R.drawable.temas_1,90)
         )
         return listST
     }

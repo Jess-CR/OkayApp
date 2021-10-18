@@ -9,6 +9,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 import org.bedu.okayapp.Inicio.LogIn
+import org.bedu.okayapp.Temas.ShowTemas
 import org.bedu.okayapp.databinding.ActivitySignUpBinding
 import org.bedu.okayapp.databinding.ActivityValidaEmailBinding
 

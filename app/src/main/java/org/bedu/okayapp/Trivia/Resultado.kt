@@ -3,10 +3,10 @@ package org.bedu.okayapp.Trivia
 //si todas las respuestas fueron correctas se otorga una insignia
 //la insignia no esta implementada
 
+import org.bedu.okayapp.Temas.ShowTemas
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import org.bedu.okayapp.Temas.ShowTemas
 import org.bedu.okayapp.databinding.ActivityResultadoBinding
 
 class Resultado : AppCompatActivity() {
