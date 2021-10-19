@@ -13,11 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OkayApp">
-        <activity
-            android:name=".pantallaCra"
-            android:exported="true" />
+
         <activity
             android:name=".ValidaEmail"
+            android:theme="@style/Theme.OkayAppNo"
             android:exported="true"
             android:parentActivityName=".Inicio.Menu">
             <meta-data
@@ -25,6 +24,7 @@
                 android:value=".Inicio.Menu" />
         </activity>
         <activity
+            android:theme="@style/Theme.OkayAppNo"
             android:name=".forgotPasword"
             android:exported="true"
             android:parentActivityName=".Inicio.LogIn">
@@ -50,6 +50,7 @@
         </activity>
         <activity
             android:name=".Inicio.LogIn"
+            android:theme="@style/Theme.OkayAppNo"
             android:exported="true"
             android:parentActivityName=".Inicio.Menu">
             <meta-data
@@ -58,6 +59,7 @@
         </activity>
         <activity
             android:name=".Inicio.SignUp"
+            android:theme="@style/Theme.OkayAppNo"
             android:exported="true"
             android:parentActivityName=".Inicio.Menu">
             <meta-data
@@ -66,9 +68,11 @@
         </activity>
         <activity
             android:name=".Inicio.Menu"
+            android:theme="@style/Theme.OkayAppNo"
             android:exported="true" />
         <activity
             android:name=".Temas.ShowTemas"
+            android:theme="@style/Theme.OkayAppNo"
             android:exported="true" />
         <activity
             android:name=".Temas.ShowSubTemas"
