@@ -136,4 +136,18 @@
         app:layout_constraintTop_toBottomOf="@+id/log_in_chkBox_remember"
         app:layout_constraintVertical_bias="0.212" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/crashButton"
+        android:layout_width="316dp"
+        android:layout_height="64dp"
+        android:backgroundTint="@color/blue_botton"
+        android:hint="@string/log_in_button"
+        android:text="error"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

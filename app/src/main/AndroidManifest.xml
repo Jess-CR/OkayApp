@@ -12,11 +12,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.OkayApp" >
+        android:theme="@style/Theme.OkayApp">
+        <activity
+            android:name=".pantallaCra"
+            android:exported="true" />
         <activity
             android:name=".ValidaEmail"
             android:exported="true"
-            android:parentActivityName=".Inicio.Menu" >
+            android:parentActivityName=".Inicio.Menu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Inicio.Menu" />
@@ -24,7 +27,7 @@
         <activity
             android:name=".forgotPasword"
             android:exported="true"
-            android:parentActivityName=".Inicio.LogIn" >
+            android:parentActivityName=".Inicio.LogIn">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Inicio.LogIn" />
@@ -32,7 +35,7 @@
         <activity
             android:name=".Inicio.Profile"
             android:exported="true"
-            android:parentActivityName=".Progreso.Progress" >
+            android:parentActivityName=".Progreso.Progress">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Progreso.Progress" />
@@ -40,7 +43,7 @@
         <activity
             android:name=".Progreso.Progress"
             android:exported="true"
-            android:parentActivityName=".Temas.ShowTemas" >
+            android:parentActivityName=".Temas.ShowTemas">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Temas.ShowTemas" />
@@ -48,7 +51,7 @@
         <activity
             android:name=".Inicio.LogIn"
             android:exported="true"
-            android:parentActivityName=".Inicio.Menu" >
+            android:parentActivityName=".Inicio.Menu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Inicio.Menu" />
@@ -56,7 +59,7 @@
         <activity
             android:name=".Inicio.SignUp"
             android:exported="true"
-            android:parentActivityName=".Inicio.Menu" >
+            android:parentActivityName=".Inicio.Menu">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Inicio.Menu" />
@@ -70,7 +73,7 @@
         <activity
             android:name=".Temas.ShowSubTemas"
             android:exported="true"
-            android:parentActivityName=".Temas.ShowTemas" >
+            android:parentActivityName=".Temas.ShowTemas">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Temas.ShowTemas" />
@@ -78,7 +81,7 @@
         <activity
             android:name=".Trivia.Seleccion"
             android:exported="true"
-            android:parentActivityName=".Progreso.Progress" >
+            android:parentActivityName=".Progreso.Progress">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Progreso.Progress" />
@@ -86,7 +89,7 @@
         <activity
             android:name=".Trivia.BaseQuestion"
             android:exported="true"
-            android:parentActivityName=".Trivia.Seleccion" >
+            android:parentActivityName=".Trivia.Seleccion">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Trivia.Seleccion" />
@@ -100,7 +103,7 @@
         <activity
             android:name=".Trivia.Estudio"
             android:exported="true"
-            android:parentActivityName=".Trivia.Seleccion" >
+            android:parentActivityName=".Trivia.Seleccion">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Trivia.Seleccion" />
@@ -110,14 +113,13 @@
             android:exported="true" /> <!-- hasta aqui -->
         <activity
             android:name=".Inicio.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
         <meta-data
             android:name="preloaded_fonts"

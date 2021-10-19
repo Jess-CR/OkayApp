@@ -41,7 +41,6 @@ class LogIn : AppCompatActivity() {
             val password=binding.logInEditTextPassword.text.toString()
             SingIn(email,password)
         }
-
         /*DEBUG ALOPEZ
         val intent = Intent(this, Progress::class.java)
         startActivity(intent)*/
