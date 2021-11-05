@@ -15,4 +15,7 @@ interface TriviaDao {
 
     @Query("SELECT * FROM questions ORDER BY id ASC")
      fun readAllData():LiveData<List<Trivia>>
+
+     @Query("SELECT DISTINCT subcat from questions WHERE category  LIKE:cat")
+      fun getSubCat(cat:String):LiveData<List<String>>
 }

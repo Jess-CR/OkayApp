@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -52,7 +53,14 @@ class QuestionFragment : Fragment() {
         mTriviaViewModel = ViewModelProvider(this).get(TriviaViewModel::class.java)
         mTriviaViewModel.readAllData.observe(viewLifecycleOwner, Observer { trivia->
             adapter.setData(trivia)
+
+
         })
+
+        mTriviaViewModel.getSubCat("Finanzas").observe(viewLifecycleOwner, Observer { data ->
+           // testAL.text=data.toString()
+        })
+
         //arriba codigoooo
         // Inflate the layout for this fragment
         return view
