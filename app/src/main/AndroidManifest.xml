@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OkayApp">
         <activity
-            android:name=".pantallaCra"
-            android:exported="true" />
-        <activity
             android:name=".ValidaEmail"
             android:exported="true"
             android:parentActivityName=".Inicio.Menu">

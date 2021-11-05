@@ -21,7 +21,7 @@
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TITULO"
                 android:textAlignment="center"
@@ -30,23 +30,20 @@
 
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="366dp"
-                android:layout_height="316dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lectus ut neque tempus hendrerit vel quis lectus. Fusce sed egestas mi, eu finibus libero. Fusce elit mi, finibus in leo et, congue volutpat orci. Cras non feugiat nibh. Duis tempus tincidunt mi, ac aliquet ex eleifend ac. Etiam auctor tellus quis justo lacinia, congue pulvinar erat lacinia. Sed fringilla sem nibh, a porta metus mollis id. In bibendum, dolor et fringilla convallis, lacus elit vestibulum velit, sit amet tristique orci lorem vel neque. In vitae eros non arcu maximus ultrices id vitae lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in nisl at sem hendrerit gravida ac sed urna. Maecenas condimentum enim et enim laoreet accumsan. "
                 android:textSize="16sp" />
 
-            <Button
-                android:id="@+id/reproducir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:text="Acceder a video explicativo" />
-
-            <com.google.android.youtube.player.YouTubePlayerView
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtubePlayer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                app:videoId="bgo9dJB_icw"
+                app:autoPlay="false"
+                app:showFullScreenButton="true"/>
         </LinearLayout>
     </ScrollView>
 

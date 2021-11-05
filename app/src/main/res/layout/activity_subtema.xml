@@ -54,15 +54,5 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp" />
-    <TextView
-        android:id="@+id/testA"
-        android:layout_width="107dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/titleSTheme"
-        android:text="Titulo"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
 
 </RelativeLayout>
