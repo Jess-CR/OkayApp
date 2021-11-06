@@ -23,21 +23,20 @@ import room.TriviaViewModel
 
 
 class ShowSubTemas : AppCompatActivity(),OnSubTemaClickListener {
+    var listST=ArrayList<SubTemasDC>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding=ActivityShowsubtemasBinding.inflate(layoutInflater)
         val view=binding.root
         setContentView(view)
-        var subtemaAdapter=SubTemas(generateDataST(),this)
-        binding.recyclerView.layoutManager = GridLayoutManager(this, 3 )
-        binding.recyclerView.adapter = subtemaAdapter
-        subtemaAdapter.notifyDataSetChanged()
-/* NO BORRAR ALOPEZ
 
 
         mTriviaViewModel = ViewModelProvider(this).get(TriviaViewModel::class.java)
-        mTriviaViewModel.getSubCat("Finanzas").observe(this, Observer { data ->
-            var listST=ArrayList<SubTemasDC>()
+        mTriviaViewModel.getSubCat(intent
+            .getStringExtra("theme").
+            toString()).
+            observe(this, Observer { data ->
+
             data.forEach {
                 listST.add(SubTemasDC(it,R.drawable.temas_1,12))
             }
@@ -46,7 +45,7 @@ class ShowSubTemas : AppCompatActivity(),OnSubTemaClickListener {
             binding.recyclerView.adapter = subtemaAdapter
             subtemaAdapter.notifyDataSetChanged()
         })
-*/
+
 
         }
 
@@ -65,6 +64,7 @@ class ShowSubTemas : AppCompatActivity(),OnSubTemaClickListener {
     }
     override fun onSubTemaItemClicked(position: Int) {
         val intent = Intent(this, Seleccion::class.java)
+        intent.putExtra("subcat",listST[position].title)
         startActivity(intent)
     }
 }

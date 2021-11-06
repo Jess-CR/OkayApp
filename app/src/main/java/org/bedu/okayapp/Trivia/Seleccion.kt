@@ -11,11 +11,17 @@ import org.bedu.okayapp.databinding.ActivityIncorrectoBinding
 import org.bedu.okayapp.databinding.ActivitySeleccionBinding
 
 class Seleccion : AppCompatActivity() {
+    companion object {
+        var subcat:String =""
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivitySeleccionBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+
+        subcat = intent.getStringExtra("subcat").toString()
 
         binding.paraEstudio.setOnClickListener {
             val intent = Intent(this, Estudio::class.java)
@@ -24,8 +30,10 @@ class Seleccion : AppCompatActivity() {
 
         binding.paraTest.setOnClickListener {
             val intent = Intent(this, BaseQuestion::class.java)
+
             startActivity(intent)
         }
 
     }
+
 }

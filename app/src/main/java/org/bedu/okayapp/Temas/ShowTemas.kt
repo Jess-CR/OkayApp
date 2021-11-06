@@ -1,9 +1,11 @@
 package org.bedu.okayapp.Temas
 
+import android.content.ContentValues.TAG
 import org.bedu.okayapp.Animations.ProgressBarAnimation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,7 +48,7 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
     private fun generateDataT(): ArrayList<TemasDC> {
         var listT = ArrayList<TemasDC>()
         listT.add(
-            TemasDC("Salud sexual y reproductiva", R.drawable.temas_1, 20)
+            TemasDC("Salud Sexual", R.drawable.temas_1, 20)
         )
         listT.add(
             TemasDC("Finanzas", R.drawable.temas_2, 50)
@@ -68,6 +70,7 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
 
     fun progreso(view: View) {
         startActivity(Intent(this, Progress::class.java))
+
     }
 
     private fun signOut() {
@@ -78,6 +81,8 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
 
     override fun onTemaItemClicked(position: Int) {
         val intent = Intent(this, ShowSubTemas::class.java)
+        intent.putExtra("theme",generateDataT()[position].title)
+
         startActivity(intent)
     }
 }
