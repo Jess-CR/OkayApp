@@ -31,7 +31,7 @@ class ShowSubTemas : AppCompatActivity(),OnSubTemaClickListener {
         setContentView(view)
 
 
-        mTriviaViewModel = ViewModelProvider(this).get(TriviaViewModel::class.java)
+
         mTriviaViewModel.getSubCat(intent
             .getStringExtra("theme").
             toString()).

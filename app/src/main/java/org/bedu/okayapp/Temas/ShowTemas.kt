@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -15,6 +16,8 @@ import com.google.firebase.ktx.Firebase
 import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.Progreso.Progress
 import org.bedu.okayapp.R
+import org.bedu.okayapp.Trivia.QuestionFragment
+import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
 import org.bedu.okayapp.Trivia.Seleccion
 import org.bedu.okayapp.databinding.ActivityShowtemasBinding
 
@@ -33,22 +36,37 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
             binding.progressPercentage,
             binding.progressPercentage
         )
-        progressBar.initProgressBar()
+        mTriviaViewModel.getTotalProgress().observe(this, Observer {
+            avg ->   progressBar.initProgressBar(avg)
+
+        })
 
         binding.categoriasButtonSalir.setOnClickListener {
             signOut()
         }
 
+        /*mTriviaViewModel.getCategories().observe(this, Observer {
+            categories ->
+            var listT = ArrayList<TemasDC>()
+            categories.forEach {
+                listT.add(TemasDC(it,R.drawable.temas_1,12))
+            }
+
+
+        })*/
         var temaAdapter=Temas(generateDataT(),this)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = temaAdapter
+
         temaAdapter.notifyDataSetChanged()
+
     }
 
     private fun generateDataT(): ArrayList<TemasDC> {
         var listT = ArrayList<TemasDC>()
+
         listT.add(
-            TemasDC("Salud Sexual", R.drawable.temas_1, 20)
+            TemasDC("Salud Sexual", R.drawable.temas_1, 12)
         )
         listT.add(
             TemasDC("Finanzas", R.drawable.temas_2, 50)
@@ -62,9 +80,9 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
         listT.add(
             TemasDC("Salud", R.drawable.temas_5, 10)
         )
-        listT.add(
-            TemasDC("Relaciones humanas", R.drawable.temas_6, 0)
-        )
+        //listT.add(
+         //   TemasDC("Relaciones humanas", R.drawable.temas_6, 0)
+        //)
         return listT
     }
 

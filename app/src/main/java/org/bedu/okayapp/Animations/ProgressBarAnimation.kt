@@ -27,7 +27,7 @@ class ProgressBarAnimation(progressBar: ProgressBar,pbText:TextView ,pbNum:TextV
 
 
 
-    fun initProgressBar() {
+    fun initProgressBar(progressValue:Int) {
         val numberAnimator = ValueAnimator.ofInt(0,100)
         numberAnimator.duration=750
         numberAnimator.startDelay=450
@@ -36,7 +36,7 @@ class ProgressBarAnimation(progressBar: ProgressBar,pbText:TextView ,pbNum:TextV
             pNum.text="${it.animatedValue}%"
             pb.progress = it.animatedValue.toString().toInt()
         })
-        val numberAnimator2 = ValueAnimator.ofInt(100,0)
+        val numberAnimator2 = ValueAnimator.ofInt(100,progressValue)
         numberAnimator2.duration=750
         numberAnimator2.startDelay=100
         numberAnimator2.interpolator=DecelerateInterpolator()

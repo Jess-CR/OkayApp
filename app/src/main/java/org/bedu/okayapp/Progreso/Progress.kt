@@ -8,9 +8,12 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.lifecycle.Observer
 import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.Inicio.Profile
 import org.bedu.okayapp.R
+import org.bedu.okayapp.Trivia.QuestionFragment
+import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
 import org.bedu.okayapp.Trivia.Seleccion
 import org.bedu.okayapp.databinding.ActivityProgressBinding
 
@@ -39,7 +42,11 @@ class Progress : AppCompatActivity() {
          preferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE) //Modo privado
 
 
-        progressBar.initProgressBar()
+
+        mTriviaViewModel.getTotalProgress().observe(this, Observer { avg->
+          progressBar.initProgressBar(avg)
+        })
+
 
         val badge = preferences.getBoolean(BADGE_1,false)
         if (badge){
