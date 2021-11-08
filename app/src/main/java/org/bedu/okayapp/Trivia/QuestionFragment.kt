@@ -57,9 +57,6 @@ class QuestionFragment : Fragment() {
 
         })
 
-        mTriviaViewModel.getSubCat("Finanzas").observe(viewLifecycleOwner, Observer { data ->
-           // testAL.text=data.toString()
-        })
 
         //arriba codigoooo
         // Inflate the layout for this fragment

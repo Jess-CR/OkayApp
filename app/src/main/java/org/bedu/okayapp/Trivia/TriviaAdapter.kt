@@ -66,13 +66,14 @@ class TriviaAdapter(
 
 
             //funcion que valida cada respuesta ingresada
-            fun answerValidate(userResp: Int, resCorrecta: Int) {
+            fun answerValidate(userResp: Int, resCorrecta: Int):Int {
 
                 trivia.userAnswer = userResp
                 intentos++
                 //si la respuesta es correcta
                 if (userResp == resCorrecta) {
                     correctas++
+
                 }
                 //si las 3 respuestas son correctas
                 if (correctas == triviaList.size) {
@@ -90,28 +91,38 @@ class TriviaAdapter(
                 boton1.isEnabled = false
                 boton2.isEnabled = false
                 boton3.isEnabled = false
+                if (userResp == resCorrecta) {
+                    return  1}
+                    else{
+                        return 0
+                    }
+
+
+
             }
+
+
             //acciones al clickear en los botones de opciones
             lateinit var triviaEdit:Trivia
             boton1.setOnClickListener {
                 var id = absoluteAdapterPosition+1
                 triviaEdit=triviaList[absoluteAdapterPosition]
                 triviaEdit.userAnswer=1
-                answerValidate(1, resCorrecta)
+                triviaEdit.ok=answerValidate(1, resCorrecta)
                 mTriviaViewModel.updateItem(triviaEdit)
             }
             boton2.setOnClickListener {
                 var id = absoluteAdapterPosition+1
                 triviaEdit=triviaList[absoluteAdapterPosition]
                 triviaEdit.userAnswer=2
-                answerValidate(2, resCorrecta)
+                triviaEdit.ok=answerValidate(2, resCorrecta)
                 mTriviaViewModel.updateItem(triviaEdit)
             }
             boton3.setOnClickListener {
                 var id = absoluteAdapterPosition+1
                 triviaEdit=triviaList[absoluteAdapterPosition]
                 triviaEdit.userAnswer=3
-                answerValidate(3, resCorrecta)
+                triviaEdit.ok=answerValidate(3, resCorrecta)
                 mTriviaViewModel.updateItem(triviaEdit)
             }
         }

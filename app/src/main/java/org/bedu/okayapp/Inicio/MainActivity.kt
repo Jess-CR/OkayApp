@@ -4,7 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.lifecycle.ViewModelProvider
 import org.bedu.okayapp.R
+import org.bedu.okayapp.Trivia.QuestionFragment
+import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
+import room.TriviaViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         //Para mejorar apariencia quitando la barra de arriba
         supportActionBar?.hide()
+        mTriviaViewModel = ViewModelProvider(this).get(TriviaViewModel::class.java)
 
         //Agregar Handler para que automáticamente después de 2.5 seg pase a la act. Menu
       Handler().postDelayed({

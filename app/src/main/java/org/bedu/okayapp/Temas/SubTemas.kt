@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import org.bedu.okayapp.R
 
 class SubTemas (private var listaST:ArrayList<SubTemasDC>,private val onSubTemaClickListener:OnSubTemaClickListener): RecyclerView.Adapter<SubTemas.ViewHolder>() {
@@ -36,13 +37,15 @@ class SubTemas (private var listaST:ArrayList<SubTemasDC>,private val onSubTemaC
 
         init {
             titleSTheme = view.findViewById(R.id.titleSTheme)
+
             imageSTheme = view.findViewById(R.id.imageSTheme)
             progressSTheme = view.findViewById(R.id.progressSTheme)
         }
 
         fun bind(SubTemasDC: SubTemasDC) {
             titleSTheme.text = SubTemasDC.title
-            imageSTheme.setImageResource(SubTemasDC.imageId)
+            Picasso.get().load(SubTemasDC.imageId).into(imageSTheme)
+            // imageSTheme.setImageResource(SubTemasDC.imageId)
             progressSTheme.progress = SubTemasDC.percentage
         }
     }
