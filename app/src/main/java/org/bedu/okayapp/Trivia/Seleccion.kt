@@ -65,6 +65,11 @@ class Seleccion : AppCompatActivity() {
 
 
         subcat = intent.getStringExtra("subcat").toString()
+
+        if(intent.getStringExtra("temaP").toString().length>1){
+            subcat = intent.getStringExtra("temaP").toString()
+
+        }
         //Se creahsea con consentiemiento y otros sub temas arreglar MapOf
         //binding.textView14.text = map.getValue(subcat)
         binding.textView12.text = subcat

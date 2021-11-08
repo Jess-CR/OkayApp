@@ -52,7 +52,7 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
                 listT.add(TemasDC(it,R.drawable.temas_1,12))
             }
 
-
+ALOPEZ se debe generar el query similar a SubTemas para generar lista que alimenta recicler view y porcetaje de avance
         })*/
         var temaAdapter=Temas(generateDataT(),this)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
@@ -66,19 +66,19 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
         var listT = ArrayList<TemasDC>()
 
         listT.add(
-            TemasDC("Salud Sexual", R.drawable.temas_1, 12)
+            TemasDC("Salud Sexual", "Relaciones humanas", 12)
         )
         listT.add(
-            TemasDC("Finanzas", R.drawable.temas_2, 50)
+            TemasDC("Finanzas", "Relaciones humanas", 50)
         )
         listT.add(
-            TemasDC("Vida laboral", R.drawable.temas_3, 90)
+            TemasDC("Vida laboral", "Relaciones humanas", 90)
         )
         listT.add(
-            TemasDC("Medio ambiente", R.drawable.temas_4, 30)
+            TemasDC("Medio ambiente","Relaciones humanas", 30)
         )
         listT.add(
-            TemasDC("Salud", R.drawable.temas_5, 10)
+            TemasDC("Salud", "Relaciones humanas", 10)
         )
         //listT.add(
          //   TemasDC("Relaciones humanas", R.drawable.temas_6, 0)

@@ -12,7 +12,7 @@ class TriviaRepository (private val triviaDao: TriviaDao){
     suspend fun updateItem(trivia: Trivia){
         triviaDao.updateItem(trivia)
     }
-    fun getCategories():LiveData<List<String>>{
+    fun getCategories():LiveData<List<SubTable>>{
         return triviaDao.getCategories()
     }
 
@@ -25,6 +25,9 @@ class TriviaRepository (private val triviaDao: TriviaDao){
     }
     fun getTotalProgress(): LiveData<Int> {
         return triviaDao.getTotalProgres()
+    }
+    fun getSubTable(cat:String):LiveData<List<SubTable>>{
+        return triviaDao.getSubTable(cat)
     }
 
 

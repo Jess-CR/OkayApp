@@ -56,6 +56,7 @@ class Progress : AppCompatActivity() {
         //ketzalli -> solo le agregue la acción al boton
         binding.progressBtnPlay.setOnClickListener {
             val intent = Intent(this, Seleccion::class.java)
+            intent.putExtra("temaP","ETS")
             startActivity(intent)
         }
         //hasta aqui

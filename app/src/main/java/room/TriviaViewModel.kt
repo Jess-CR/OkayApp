@@ -21,7 +21,7 @@ class TriviaViewModel(application: Application):AndroidViewModel(application) {
             repository.updateItem(trivia)
         }
     }
-    fun getCategories():LiveData<List<String>>{
+    fun getCategories():LiveData<List<SubTable>>{
         return repository.getCategories()
     }
 
@@ -34,7 +34,9 @@ class TriviaViewModel(application: Application):AndroidViewModel(application) {
     fun getTotalProgress(): LiveData<Int> {
         return repository.getTotalProgress()
     }
-
+    fun getSubTable(cat: String):LiveData<List<SubTable>>{
+        return repository.getSubTable(cat)
+    }
     }
 
     /*fun addItem(trivia: org.bedu.okayapp.Trivia){

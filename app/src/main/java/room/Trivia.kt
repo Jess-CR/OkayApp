@@ -17,5 +17,6 @@ data class Trivia(
     var userAnswer: Int?,
     var ok:Int?,
     val image: String?,
+    val themeicon:String?,
     val icon: String?
 )
