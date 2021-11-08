@@ -1,18 +1,14 @@
 package org.bedu.okayapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.view.View
-import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.databinding.ActivityForgotPaswordBinding
-import org.bedu.okayapp.databinding.ActivityLogInBinding
 
 class forgotPasword : AppCompatActivity() {
    /* private lateinit var log_in_editText_email: EditText

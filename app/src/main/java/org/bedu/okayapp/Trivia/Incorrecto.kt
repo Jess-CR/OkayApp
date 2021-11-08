@@ -16,6 +16,8 @@ class Incorrecto : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.hide()
+
         Handler().postDelayed({
             val intent = Intent(this, ShowTemas::class.java)
             startActivity(intent)

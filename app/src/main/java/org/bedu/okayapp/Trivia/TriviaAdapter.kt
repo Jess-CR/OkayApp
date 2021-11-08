@@ -13,7 +13,6 @@ import com.squareup.picasso.Picasso
 import org.bedu.okayapp.R
 import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
 import room.Trivia
-import room.TriviaViewModel
 
 //variables de control
 var correctas: Int = 0

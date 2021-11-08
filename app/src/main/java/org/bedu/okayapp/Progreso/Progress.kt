@@ -1,20 +1,16 @@
 package org.bedu.okayapp.Progreso
 
 import android.content.Context
-import org.bedu.okayapp.Animations.ProgressBarAnimation
-import org.bedu.okayapp.Trivia.BaseQuestion
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import org.bedu.okayapp.Inicio.LogIn
+import org.bedu.okayapp.Animations.ProgressBarAnimation
 import org.bedu.okayapp.Inicio.Profile
 import org.bedu.okayapp.R
-import org.bedu.okayapp.Trivia.QuestionFragment
+import org.bedu.okayapp.Temas.ShowTemas
 import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
-import org.bedu.okayapp.Trivia.Seleccion
 import org.bedu.okayapp.databinding.ActivityProgressBinding
 
 class Progress : AppCompatActivity() {
@@ -30,6 +26,7 @@ class Progress : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
+        supportActionBar?.hide()
 
         binding = ActivityProgressBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -55,7 +52,7 @@ class Progress : AppCompatActivity() {
 
         //ketzalli -> solo le agregue la acción al boton
         binding.progressBtnPlay.setOnClickListener {
-            val intent = Intent(this, Seleccion::class.java)
+            val intent = Intent(this, ShowTemas::class.java)
             intent.putExtra("temaP","ETS")
             startActivity(intent)
         }

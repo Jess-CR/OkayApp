@@ -44,6 +44,13 @@
                 app:videoId="bgo9dJB_icw"
                 app:autoPlay="false"
                 app:showFullScreenButton="true"/>
+
+            <Button
+                android:id="@+id/boton_regreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                tools:text="Regresar" />
         </LinearLayout>
     </ScrollView>
 

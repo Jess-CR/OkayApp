@@ -16,6 +16,8 @@ class Resultado : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.hide()
+
         binding.continuar.setOnClickListener {
             val intent = Intent(this, ShowTemas::class.java)
             startActivity(intent)
