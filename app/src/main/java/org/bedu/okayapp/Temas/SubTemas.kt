@@ -40,6 +40,7 @@ class SubTemas (private var listaST:ArrayList<SubTemasDC>,private val onSubTemaC
 
             imageSTheme = view.findViewById(R.id.imageSTheme)
             progressSTheme = view.findViewById(R.id.progressSTheme)
+            progressSTheme.progress = 0
         }
 
         fun bind(SubTemasDC: SubTemasDC) {

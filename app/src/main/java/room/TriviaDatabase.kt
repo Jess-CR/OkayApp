@@ -25,7 +25,7 @@ abstract class TriviaDatabase: RoomDatabase() {
                     TriviaDatabase::class.java,
                     "trivia.db"
                 ).createFromAsset("database/trivia.db")
-                   // .fallbackToDestructiveMigration()
+                    //.fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 return instance
