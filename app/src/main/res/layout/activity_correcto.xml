@@ -1,45 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--ketzalli
+<?xml version="1.0" encoding="utf-8"?><!--ketzalli
 muestra que las respuestas fueron correctas-->
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp">
+    android:background="@color/lighter_gray">
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F2F1F1"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:cardBackgroundColor="@color/yolo_orange"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="13dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/img"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="125dp"
-                android:layout_marginBottom="10dp"
-                android:scaleType="center"
+                android:layout_height="200dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="25dp"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/happy_emoji" />
 
             <TextView
+                android:id="@+id/texto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_below="@+id/img"
+                android:layout_marginBottom="40dp"
                 android:fontFamily="@font/bowlby_one"
                 android:text="¡MUY BIEN! \n Respuestas correctas"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#663399" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</com.google.android.material.card.MaterialCardView>
+                android:textColor="@color/lighter_gray" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

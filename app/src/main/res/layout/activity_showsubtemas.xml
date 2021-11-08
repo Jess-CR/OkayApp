@@ -1,68 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lighter_gray"
     tools:context="org.bedu.okayapp.Temas.ShowSubTemas">
 
-    <TextView
-        android:id="@+id/textView4"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SALUD SEXUAL Y REPRODUCTIVA"
-        android:textSize="20dp"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="10dp"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        app:cardBackgroundColor="@color/yolo_purple">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="SALUD SEXUAL Y REPRODUCTIVA"
+            android:textColor="@color/yolo_purple"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/yolo_purple"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
 
-            <ProgressBar
-                android:id="@+id/progressPogressBar"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:indeterminateOnly="false"
-                android:max="100"
-                android:progress="12"
-                android:progressDrawable="@drawable/circle_progress"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/ThemeIcon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/temas_1"
-                app:layout_constraintRight_toRightOf="@id/progressPogressBar"
-                app:layout_constraintLeft_toLeftOf="@id/progressPogressBar"
-                app:layout_constraintTop_toTopOf="@id/progressPogressBar"
-                app:layout_constraintBottom_toBottomOf="@id/progressPogressBar"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+                <ProgressBar
+                    android:id="@+id/progressPogressBar"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:indeterminateOnly="false"
+                    android:max="100"
+                    android:progress="12"
+                    android:progressDrawable="@drawable/circle_progress"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="360dp"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/materialCardView"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"/>
+                <ImageView
+                    android:id="@+id/ThemeIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/temas_1"
+                    app:layout_constraintBottom_toBottomOf="@id/progressPogressBar"
+                    app:layout_constraintLeft_toLeftOf="@id/progressPogressBar"
+                    app:layout_constraintRight_toRightOf="@id/progressPogressBar"
+                    app:layout_constraintTop_toTopOf="@id/progressPogressBar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/materialCardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+    </RelativeLayout>
 </RelativeLayout>

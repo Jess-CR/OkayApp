@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.bedu.okayapp.Inicio.SignUp"
-    android:background="@color/purple_background">
+    android:background="@color/purple_background"
+    tools:context="org.bedu.okayapp.Inicio.SignUp">
 
 
     <TextView
@@ -30,9 +30,9 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
         android:ems="10"
         android:hint="@string/sign_up_user_name_ph"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
         android:inputType="textPersonName"
         android:paddingStart="20dp"
         android:textColor="@color/grey_placeholders"
@@ -43,13 +43,13 @@
         tools:ignore="RtlSymmetry" />
 
     <EditText
-        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:id="@+id/sign_up_editText_email"
         android:layout_width="340dp"
         android:layout_height="48dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:ems="10"
         android:hint="@string/sign_up_email_ph"
         android:inputType="textEmailAddress"
@@ -61,13 +61,14 @@
         app:layout_constraintStart_toStartOf="@+id/sign_up_editText_username"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_editText_username"
         tools:ignore="RtlSymmetry" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:endIconMode="password_toggle"
         android:inputType="textPassword"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="@+id/sign_up_editText_email"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/sign_up_editText_email"

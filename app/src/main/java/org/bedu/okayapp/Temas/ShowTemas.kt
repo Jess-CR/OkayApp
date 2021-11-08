@@ -1,24 +1,18 @@
 package org.bedu.okayapp.Temas
 
-import android.content.ContentValues.TAG
-import org.bedu.okayapp.Animations.ProgressBarAnimation
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import org.bedu.okayapp.Animations.ProgressBarAnimation
 import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.Progreso.Progress
-import org.bedu.okayapp.R
-import org.bedu.okayapp.Trivia.QuestionFragment
 import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
-import org.bedu.okayapp.Trivia.Seleccion
 import org.bedu.okayapp.databinding.ActivityShowtemasBinding
 
 
@@ -30,6 +24,8 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
         val binding = ActivityShowtemasBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
         val progressBar = ProgressBarAnimation(

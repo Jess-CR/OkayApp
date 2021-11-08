@@ -74,18 +74,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Temas.ShowTemas" />
-        </activity> <!-- ketzalli -->
+        </activity>
         <activity
             android:name=".Trivia.Seleccion"
             android:exported="true"
-            android:parentActivityName=".Progreso.Progress">
+            android:parentActivityName=".Temas.ShowSubTemas">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Progreso.Progress" />
+                android:value=".Temas.ShowSubTemas" />
         </activity>
         <activity
             android:name=".Trivia.BaseQuestion"
-            android:exported="true">
+            android:exported="true"
+            android:parentActivityName=".Trivia.Seleccion">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Trivia.Seleccion" />
         </activity>
         <activity
             android:name=".Trivia.Correcto"
@@ -103,13 +107,12 @@
         </activity>
         <activity
             android:name=".Trivia.Incorrecto"
-            android:exported="true" /> <!-- hasta aqui -->
+            android:exported="true" />
         <activity
             android:name=".Inicio.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

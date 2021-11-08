@@ -1,61 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Trivia.Seleccion">
+    tools:context=".Trivia.Estudio"
+    android:background="@color/lighter_gray">
 
-    <Button
-        android:id="@+id/paraEstudio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
-        android:text="Estudio"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.511" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerInParent="true">
 
-    <Button
-        android:id="@+id/paraTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paraEstudio"
-        app:layout_constraintVertical_bias="0.208" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="TITULO"
+                android:textAlignment="center"
+                android:textColor="@color/yolo_purple"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TITULO"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView12"
+                android:textColor="@color/grey_letters"
+                android:layout_marginTop="20dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lectus ut neque tempus hendrerit vel quis lectus. Fusce sed egestas mi, eu finibus libero. Fusce elit mi, finibus in leo et, congue volutpat orci. Cras non feugiat nibh. Duis tempus tincidunt mi, ac aliquet ex eleifend ac. Etiam auctor tellus quis justo lacinia, congue pulvinar erat lacinia. Sed fringilla sem nibh, a porta metus mollis id. In bibendum, dolor et fringilla convallis, lacus elit vestibulum velit, sit amet tristique orci lorem vel neque. In vitae eros non arcu maximus ultrices id vitae lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in nisl at sem hendrerit gravida ac sed urna. Maecenas condimentum enim et enim laoreet accumsan. "
+                android:textSize="17sp" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="374dp"
-        android:layout_height="168dp"
-        android:layout_marginTop="24dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt finibus iaculis. Fusce porta efficitur pretium. Nullam turpis sapien, auctor sit amet nunc vel, feugiat cursus tortor. Maecenas commodo in tortor id vestibulum. Mauris ut felis sed erat iaculis elementum. Praesent sed ante vitae augue malesuada vulputate. Aliquam id nisi massa. Proin fringilla diam at scelerisque malesuada. Mauris quis porttitor eros. "
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.036" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/paraEstudio"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/blue_botton"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                android:text="Estudio"
+                android:layout_below="@id/textView14"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/paraTest"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/blue_botton"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                android:layout_marginBottom="40dp"
+                android:text="Test"
+                android:layout_below="@id/paraEstudio" />
+        </RelativeLayout>
+
+</RelativeLayout>
