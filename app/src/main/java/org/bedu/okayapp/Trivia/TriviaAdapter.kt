@@ -56,7 +56,9 @@ class TriviaAdapter(
         fun bind(trivia: Trivia) {
             //asignar los valores a su respectivo componente
             pregunta.text = trivia.triviaQuestion
-            Picasso.get().load(trivia.image).into(imagen)
+            Picasso.get().load(trivia.image).
+            placeholder(R.drawable.progress).
+            into(imagen)
             // imagen.setImageResource(R.drawable.imgprueba)
             boton1.text = trivia.option1
             boton2.text = trivia.option2
