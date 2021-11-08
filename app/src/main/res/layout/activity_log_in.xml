@@ -11,14 +11,13 @@
         android:id="@+id/sign_up_txt_title"
         android:layout_width="166dp"
         android:layout_height="33dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:text="Iniciar sesión"
         android:textAlignment="center"
         android:textColor="@color/purple"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,7 +25,7 @@
         android:id="@+id/log_in_txt_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="44dp"
         android:text="@string/log_in_email"
         android:textColor="@color/grey_letters"
         android:textSize="17dp"
@@ -37,20 +36,21 @@
 
     <EditText
         android:id="@+id/log_in_editText_email"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:layout_width="340dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:ems="10"
         android:hint="@string/log_in_email_ph"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
         android:textColor="@color/grey_placeholders"
         android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/sign_up_txt_title"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_txt_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/log_in_txt_email"
         app:layout_constraintTop_toBottomOf="@+id/log_in_txt_email" />
 
     <TextView
@@ -112,9 +112,12 @@
         android:hint="@string/log_in_remember"
         android:textColor="@color/purple"
         android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/log_in_txt_forgot"
-        app:layout_constraintStart_toStartOf="@+id/log_in_txt_forgot"
-        app:layout_constraintTop_toBottomOf="@+id/log_in_txt_forgot" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_in_txt_forgot"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/log_in_btn_logIn"
@@ -127,11 +130,10 @@
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintHorizontal_bias="0.589"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/log_in_chkBox_remember"
-        app:layout_constraintVertical_bias="0.369" />
-
+        app:layout_constraintVertical_bias="0.212" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

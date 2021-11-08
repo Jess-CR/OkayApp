@@ -13,5 +13,9 @@ class TriviaRepository (private val triviaDao: TriviaDao){
         triviaDao.updateItem(trivia)
     }
 
+    fun getSubCat(category:String):LiveData<List<String>>{
+        return triviaDao.getSubCat(category)
+    }
+
 
 }

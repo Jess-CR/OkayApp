@@ -21,6 +21,10 @@ class TriviaViewModel(application: Application):AndroidViewModel(application) {
             repository.updateItem(trivia)
         }
     }
+    fun getSubCat(cat:String):LiveData<List<String>>{
+            return repository.getSubCat(cat)
+        }
+    }
     /*fun addItem(trivia: org.bedu.okayapp.Trivia){
         viewModelScope.launch(Dispatchers.IO) {
             repository.addItem(trivia)
@@ -28,4 +32,3 @@ class TriviaViewModel(application: Application):AndroidViewModel(application) {
     }*/
 
 
-}

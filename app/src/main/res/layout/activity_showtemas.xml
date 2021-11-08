@@ -6,87 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".Temas.ShowTemas">
 
-    <TextView
-        android:id="@+id/elegirCat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Elige una categoría..."
-        android:textColor="@color/yolo_blue"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/elegirCat"
-        app:layout_constraintVertical_bias="0.252" />
-
-    <TextView
-        android:id="@+id/progreso"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="80dp"
-        android:layout_marginStart="116dp"
-        android:onClick="progreso"
-        android:text="Sigue aprendiendo, Nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/progressPercentage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="progreso"
-        android:text="100%"
-        android:textColor="#663399"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/CategoriesProgressBar"
-        app:layout_constraintEnd_toEndOf="@+id/CategoriesProgressBar"
-        app:layout_constraintStart_toStartOf="@+id/CategoriesProgressBar"
-        app:layout_constraintTop_toTopOf="@+id/CategoriesProgressBar"
-        tools:ignore="OnClick" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <ProgressBar
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/CategoriesProgressBar"
-        style="?android:attr/progressBarStyle"
-        android:indeterminateOnly="false"
-        android:max="100"
-        android:progress="0"
-        android:progressDrawable="@drawable/circle_progress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toEndOf="@+id/progreso"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+        <TextView
+            android:id="@+id/elegirCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige una categoría"
+            android:textColor="@color/yolo_blue"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.049" />
 
-    <Button
-        android:id="@+id/categorias_button_salir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="salir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/elegirCat"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elegirCat"
+            app:layout_constraintVertical_bias="0.252" />
+
+        <TextView
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginStart="116dp"
+            android:onClick="progreso"
+            android:text="Sigue aprendiendo, Nombre"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+            app:layout_constraintVertical_bias="0.479" />
+
+        <TextView
+            android:id="@+id/progressPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="progreso"
+            android:text="100%"
+            android:textColor="#663399"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/CategoriesProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/CategoriesProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/CategoriesProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/CategoriesProgressBar"
+            tools:ignore="OnClick" />
+
+        <ProgressBar
+            android:id="@+id/CategoriesProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/circle_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintStart_toEndOf="@+id/progreso"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+        <Button
+            android:id="@+id/categorias_button_salir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="salir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/elegirCat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
