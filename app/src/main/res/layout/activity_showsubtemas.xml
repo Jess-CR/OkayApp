@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     android:background="@color/lighter_gray"
     tools:context="org.bedu.okayapp.Temas.ShowSubTemas">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true">
 
@@ -71,4 +73,5 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp" />
     </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

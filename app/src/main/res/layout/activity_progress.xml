@@ -1,191 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?><!-- Agregar imagen previa del perfil en la esquina superior derecha-->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_500"
     tools:context="org.bedu.okayapp.Progreso.Progress">
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
-
-    <TextView
-        android:id="@+id/progressTextGreet"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:text="Bienvenido, Usuario"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/progressPogressBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_centerInParent="true">
 
-    <TextView
-        android:id="@+id/progressTextPercentage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="%"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar"
-        app:layout_constraintEnd_toEndOf="@+id/progressPogressBar"
-        app:layout_constraintStart_toStartOf="@+id/progressPogressBar"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp">
 
-    <TextView
-        android:id="@+id/progressPogressStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Completado"
-        android:textColor="@color/white"
-        android:textSize="14dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar"
-        app:layout_constraintEnd_toEndOf="@+id/progressPogressBar"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/progressPogressBar"
-        app:layout_constraintTop_toTopOf="@+id/progressPogressBar"
-        app:layout_constraintVertical_bias="0.292" />
+            <TextView
+                android:id="@+id/progressTextGreet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:text="Bienvenido, Usuario"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/progressPogressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
-    <ProgressBar
-        android:id="@+id/progressPogressBar"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:indeterminateOnly="false"
-        android:max="100"
-        android:progress="0"
-        android:progressDrawable="@drawable/circle_progress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.258" />
+            <TextView
+                android:id="@+id/progressTextPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar"
+                app:layout_constraintEnd_toEndOf="@+id/progressPogressBar"
+                app:layout_constraintStart_toStartOf="@+id/progressPogressBar"
+                app:layout_constraintTop_toTopOf="@+id/progressPogressBar" />
 
-    <!---
+            <TextView
+                android:id="@+id/progressPogressStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completado"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/progressPogressBar"
+                app:layout_constraintEnd_toEndOf="@+id/progressPogressBar"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="@+id/progressPogressBar"
+                app:layout_constraintTop_toTopOf="@+id/progressPogressBar"
+                app:layout_constraintVertical_bias="0.292" />
+
+            <ProgressBar
+                android:id="@+id/progressPogressBar"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/circle_progress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.258" />
+
+            <!---
         Entrada numerica para cambiar valor actual e progressBar
     -->
-    <EditText
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="porcentaje"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressPogressBar"
-        app:layout_constraintVertical_bias="0.928" />
+            <EditText
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="porcentaje"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressPogressBar"
+                app:layout_constraintVertical_bias="0.928" />
 
-    <TextView
-        android:id="@+id/progressTextBadges"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mis insignias"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressPogressBar"
-        app:layout_constraintVertical_bias="0.149" />
+            <TextView
+                android:id="@+id/progressTextBadges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis insignias"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressPogressBar"
+                app:layout_constraintVertical_bias="0.149" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressTextBadges"
-        app:layout_constraintVertical_bias="0.115"
-        tools:layout_editor_absoluteX="0dp">
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressTextBadges"
+                app:layout_constraintVertical_bias="0.115"
+                tools:layout_editor_absoluteX="0dp">
 
-        <ImageView
-            android:id="@+id/badge1"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:src="@drawable/locked_item"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView5"
-            tools:layout_editor_absoluteY="442dp" />
+                <ImageView
+                    android:id="@+id/badge1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/locked_item"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    tools:layout_editor_absoluteY="442dp" />
 
-        <ImageView
-            android:id="@+id/badge2"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:src="@drawable/locked_item"
-            app:layout_constraintEnd_toStartOf="@+id/imageView6"
-            app:layout_constraintStart_toEndOf="@+id/imageView7"
-            tools:layout_editor_absoluteY="442dp" />
+                <ImageView
+                    android:id="@+id/badge2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/locked_item"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    tools:layout_editor_absoluteY="442dp" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:src="@drawable/locked_item"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="442dp" />
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/locked_item"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="442dp" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:src="@drawable/locked_item"
-            tools:layout_editor_absoluteX="123dp"
-            tools:layout_editor_absoluteY="442dp" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/locked_item"
+                    tools:layout_editor_absoluteX="123dp"
+                    tools:layout_editor_absoluteY="442dp" />
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/locked_item"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="442dp" />
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/locked_item"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="442dp" />
+            </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/progressBtnPlay"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#F8C731"
-        android:text="SEGUIR JUGANDO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.331" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/progressBtnPlay"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#F8C731"
+                android:text="SEGUIR JUGANDO"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintVertical_bias="0.331" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/progressBtnProfile"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="Perfil"
-        android:backgroundTint="@color/yolo_yellow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/progressBtnProfile"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/yolo_yellow"
+                android:text="Perfil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/lighter_gray"
     tools:context="org.bedu.okayapp.Inicio.LogIn">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -125,4 +129,5 @@
             android:textStyle="bold"
             app:cornerRadius="8dp" />
     </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

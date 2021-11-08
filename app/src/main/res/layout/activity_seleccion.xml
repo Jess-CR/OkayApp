@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Trivia.Estudio"
     android:background="@color/lighter_gray">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,5 +63,5 @@
                 android:text="Test"
                 android:layout_below="@id/paraEstudio" />
         </RelativeLayout>
-
+    </ScrollView>
 </RelativeLayout>
