@@ -21,7 +21,7 @@ class Correcto : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-
+        supportActionBar?.hide()
 
 
 

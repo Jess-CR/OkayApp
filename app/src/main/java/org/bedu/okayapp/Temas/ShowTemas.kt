@@ -1,24 +1,18 @@
 package org.bedu.okayapp.Temas
 
-import android.content.ContentValues.TAG
-import org.bedu.okayapp.Animations.ProgressBarAnimation
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import org.bedu.okayapp.Animations.ProgressBarAnimation
 import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.Progreso.Progress
-import org.bedu.okayapp.R
-import org.bedu.okayapp.Trivia.QuestionFragment
 import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
-import org.bedu.okayapp.Trivia.Seleccion
 import org.bedu.okayapp.databinding.ActivityShowtemasBinding
 
 
@@ -29,6 +23,8 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
         val binding = ActivityShowtemasBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
         val progressBar = ProgressBarAnimation(
@@ -66,19 +62,19 @@ ALOPEZ se debe generar el query similar a SubTemas para generar lista que alimen
         var listT = ArrayList<TemasDC>()
 
         listT.add(
-            TemasDC("Salud Sexual", "Relaciones humanas", 12)
+            TemasDC("Salud Sexual", "https://i.imgur.com/urgYhKC.png", 0)
         )
         listT.add(
-            TemasDC("Finanzas", "Relaciones humanas", 50)
+            TemasDC("Finanzas", "https://i.imgur.com/GKyEkwY.png", 0)
         )
         listT.add(
-            TemasDC("Vida laboral", "Relaciones humanas", 90)
+            TemasDC("Vida Laboral", "https://i.imgur.com/SSXdMgw.png", 0)
         )
         listT.add(
-            TemasDC("Medio ambiente","Relaciones humanas", 30)
+            TemasDC("Medio Ambiente","https://i.imgur.com/rOY6O5g.png", 0)
         )
         listT.add(
-            TemasDC("Salud", "Relaciones humanas", 10)
+            TemasDC("Salud", "https://i.imgur.com/skolR9G.png", 0)
         )
         //listT.add(
          //   TemasDC("Relaciones humanas", R.drawable.temas_6, 0)

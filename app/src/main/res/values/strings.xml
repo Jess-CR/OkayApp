@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OkayApp</string>
+    <string name="app_name">YoloApp</string>
 
     <!-- ***************** Pantalla Menu ***************** -->
     <string name="menu_login">Iniciar Sesión</string>

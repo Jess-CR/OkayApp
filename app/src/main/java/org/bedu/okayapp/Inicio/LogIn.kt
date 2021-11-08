@@ -1,24 +1,16 @@
 package org.bedu.okayapp.Inicio
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
-import org.bedu.okayapp.R
 import org.bedu.okayapp.Temas.ShowTemas
 import org.bedu.okayapp.ValidaEmail
 import org.bedu.okayapp.databinding.ActivityLogInBinding
-import org.bedu.okayapp.databinding.ActivityMainBinding
 import org.bedu.okayapp.forgotPasword
 
 class LogIn : AppCompatActivity() {

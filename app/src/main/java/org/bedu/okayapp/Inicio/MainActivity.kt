@@ -1,12 +1,11 @@
 package org.bedu.okayapp.Inicio
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import org.bedu.okayapp.R
-import org.bedu.okayapp.Trivia.QuestionFragment
 import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
 import room.TriviaViewModel
 

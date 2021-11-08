@@ -18,6 +18,8 @@ class Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
+        supportActionBar?.hide()
+
         menu_img_logo =findViewById(R.id.logoMenu)
         menu_btn_logIn =findViewById(R.id.menu_btn_logIn)
         menu_btn_signUp =findViewById(R.id.menu_btn_signUp)
