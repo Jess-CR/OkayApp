@@ -1,57 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Trivia.Estudio">
+    tools:context=".Trivia.Estudio"
+    android:background="@color/lighter_gray">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TITULO"
+                android:layout_marginTop="40dp"
+                android:text="Salud Sexual"
                 android:textAlignment="center"
+                android:textColor="@color/yolo_purple"
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/contenido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
+                android:layout_below="@+id/titulo"
+                android:layout_marginTop="20dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lectus ut neque tempus hendrerit vel quis lectus. Fusce sed egestas mi, eu finibus libero. Fusce elit mi, finibus in leo et, congue volutpat orci. Cras non feugiat nibh. Duis tempus tincidunt mi, ac aliquet ex eleifend ac. Etiam auctor tellus quis justo lacinia, congue pulvinar erat lacinia. Sed fringilla sem nibh, a porta metus mollis id. In bibendum, dolor et fringilla convallis, lacus elit vestibulum velit, sit amet tristique orci lorem vel neque. In vitae eros non arcu maximus ultrices id vitae lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in nisl at sem hendrerit gravida ac sed urna. Maecenas condimentum enim et enim laoreet accumsan. "
-                android:textSize="16sp" />
+                android:textColor="@color/grey_letters"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tituloVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contenido"
+                android:layout_marginTop="25dp"
+                android:text="¿Qué es la salud sexual?"
+                android:textAlignment="center"
+                android:textColor="@color/yolo_purple"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtubePlayer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="16dp"
-                app:videoId="bgo9dJB_icw"
+                android:layout_below="@id/tituloVideo"
+                android:layout_marginTop="20dp"
                 app:autoPlay="false"
-                app:showFullScreenButton="true"/>
+                app:showFullScreenButton="true"
+                app:videoId="cZYZzr1G2iQ" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/boton_regreso"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Regresar"
-                tools:text="Regresar" />
-        </LinearLayout>
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/blue_botton"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                app:cornerRadius="8dp"
+                android:layout_below="@id/youtubePlayer"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="40dp"
+                android:text="Regresar" />
+        </RelativeLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

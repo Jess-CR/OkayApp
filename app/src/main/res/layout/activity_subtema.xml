@@ -11,10 +11,10 @@
         android:id="@+id/materialCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="10dp"
         android:layout_centerHorizontal="true"
-        app:cardBackgroundColor="@color/yolo_blue">
+        app:cardBackgroundColor="@color/yolo_blue"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

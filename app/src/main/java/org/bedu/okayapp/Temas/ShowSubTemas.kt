@@ -1,24 +1,14 @@
 package org.bedu.okayapp.Temas
 
-import android.app.Application
-import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleOwner
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.squareup.picasso.Picasso
-import org.bedu.okayapp.R
-import org.bedu.okayapp.Trivia.QuestionFragment
 import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
 import org.bedu.okayapp.Trivia.Seleccion
 import org.bedu.okayapp.databinding.ActivityShowsubtemasBinding
-import room.TriviaViewModel
 import kotlin.math.floor
 
 //pendiente: el progreso se obtiene sacando el porcentaje de los subtemas
@@ -31,6 +21,7 @@ class ShowSubTemas : AppCompatActivity(),OnSubTemaClickListener {
         val binding=ActivityShowsubtemasBinding.inflate(layoutInflater)
         val view=binding.root
         setContentView(view)
+        supportActionBar?.hide()
         val theme =intent.getStringExtra("theme").toString()
         mTriviaViewModel.getProgress(theme).observe(this, Observer {
                 avg->

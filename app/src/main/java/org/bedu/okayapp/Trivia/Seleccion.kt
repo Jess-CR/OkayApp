@@ -35,6 +35,7 @@ class Seleccion : AppCompatActivity() {
         val binding = ActivitySeleccionBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        supportActionBar?.hide()
 
 
 

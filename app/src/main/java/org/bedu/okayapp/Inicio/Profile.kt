@@ -21,6 +21,8 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+        supportActionBar?.hide()
+
         profile_button = findViewById(R.id.profile_button)
         profile_imageView = findViewById(R.id.profile_imageView)
 

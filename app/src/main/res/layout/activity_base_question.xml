@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--esto se agrego al fragment-->
+<?xml version="1.0" encoding="utf-8"?><!--esto se agrego al fragment-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,8 +7,8 @@
     tools:context=".Trivia.BaseQuestion">
 
     <fragment
-        android:name="org.bedu.okayapp.Trivia.QuestionFragment"
         android:id="@+id/questionFragment"
+        android:name="org.bedu.okayapp.Trivia.QuestionFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
