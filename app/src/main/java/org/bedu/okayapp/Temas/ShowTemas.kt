@@ -13,15 +13,17 @@ import org.bedu.okayapp.Animations.ProgressBarAnimation
 import org.bedu.okayapp.Inicio.LogIn
 import org.bedu.okayapp.Progreso.Progress
 import org.bedu.okayapp.Trivia.QuestionFragment.Companion.mTriviaViewModel
+import org.bedu.okayapp.databinding.ActivityProgressBinding
 import org.bedu.okayapp.databinding.ActivityShowtemasBinding
 
 
 class ShowTemas : AppCompatActivity(),OnTemaClickListener {
     private lateinit var auth: FirebaseAuth
+    private lateinit var binding: ActivityShowtemasBinding
     private var listT = ArrayList<TemasDC>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityShowtemasBinding.inflate(layoutInflater)
+        binding = ActivityShowtemasBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
@@ -71,6 +73,14 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
             temaAdapter.notifyDataSetChanged()
 
         })
+        updateUI()
+    }
+    private fun updateUI(){
+        val user = auth.currentUser
+        if(user != null){
+            binding.progreso2.text = user.email
+            //binding.profileTxtViewUserName.text = user.displayName
+        }
     }
 
 
@@ -92,4 +102,6 @@ class ShowTemas : AppCompatActivity(),OnTemaClickListener {
 
         startActivity(intent)
     }
+
+
 }

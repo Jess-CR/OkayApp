@@ -49,13 +49,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="80dp"
-                android:layout_marginStart="116dp"
+                android:layout_marginStart="30dp"
                 android:onClick="progreso"
-                android:text="Sigue aprendiendo, Nombre"
+                android:text="Sigue aprendiendo,"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-                app:layout_constraintVertical_bias="0.479" />
+                app:layout_constraintVertical_bias="0.516" />
+
+            <TextView
+                android:id="@+id/progreso2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginStart="1dp"
+                android:onClick="progreso"
+                android:text="Nombre"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/progreso"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                app:layout_constraintVertical_bias="0.451" />
 
             <TextView
                 android:id="@+id/progressPercentage"
@@ -83,8 +96,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.434"
-                app:layout_constraintStart_toEndOf="@+id/progreso"
+                app:layout_constraintStart_toEndOf="@+id/progreso2"
                 app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+
 
             <Button
                 android:id="@+id/categorias_button_salir"

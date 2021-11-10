@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.google.firebase.auth.FirebaseAuth
 import org.bedu.okayapp.Animations.ProgressBarAnimation
 import org.bedu.okayapp.Inicio.Profile
 import org.bedu.okayapp.R
@@ -21,11 +22,12 @@ class Progress : AppCompatActivity() {
     }
     lateinit var preferences: SharedPreferences
     private lateinit var binding: ActivityProgressBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-
+        auth= FirebaseAuth.getInstance()
         supportActionBar?.hide()
 
         binding = ActivityProgressBinding.inflate(layoutInflater)
@@ -57,7 +59,7 @@ class Progress : AppCompatActivity() {
             startActivity(intent)
         }
         //hasta aqui
-
+        updateUI()
         activity_profile()
     }
 
@@ -69,5 +71,12 @@ class Progress : AppCompatActivity() {
             }
     }
 
+    private fun updateUI(){
+        val user = auth.currentUser
+        if(user != null){
+            binding.progressTextGreett.text = user.email
+            //binding.profileTxtViewUserName.text = user.displayName
+        }
+    }
 }
 

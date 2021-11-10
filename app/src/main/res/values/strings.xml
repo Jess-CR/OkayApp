@@ -42,4 +42,9 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- ***************** Pantalla Cambiar contraseña **************** -->
+    <string name="cha_pass_uno">Contraseña actual</string>
+    <string name="cha_pass_nueva">Nueva contraseña</string>
+    <string name="cha_pass_confir">Confirmar</string>
 </resources>
